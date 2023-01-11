@@ -8,5 +8,5 @@
 ### Hi there 👋
 
 - 🔭 I’m currently working on a personal project
-- 🌱 I’m currently learning Dart and Flutter
+- 🌱 I’m currently learning Solidity and Blockchain coding
 - 📫 How to reach me: @pliniomabesi
