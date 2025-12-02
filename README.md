@@ -51,8 +51,13 @@ Alongside my Web3 path, I have solid experience developing complete software sys
 ## 📈 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=mabesi&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&cache_seconds=1800" alt="Plinio's GitHub Stats" />
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=mabesi&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&cache_seconds=1800" alt="Top Languages" />
+  
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=mabesi&theme=radical&hide_border=true&background=0D1117)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mabesi&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&include_all_commits=true&count_private=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mabesi&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&langs_count=8)
+
 </div>
 
 ---
