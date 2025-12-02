@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mabesi.dev - Web3 Portfolio</title>
+  <style>
+    /* ===== NOVO TEMA WEB3 HOLOGRÁFICO FUTURISTA ===== */
+    :root {
+      --bg: #0b0c0f;
+      --glass: rgba(255, 255, 255, 0.05);
+      --text: #e8e8ec;
+      --accent: #3bc7ff;
+      /* azul elegante */
+      --accent2: #ffaa33;
+      /* laranja suave */
+      --radius: 18px;
+      --shadow: 0 0 22px rgba(59, 199, 255, 0.28);
+      --shadow2: 0 0 22px rgba(255, 170, 51, 0.28);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ===== MENU FLUTUANTE ===== */
+    nav {
+      position: fixed;
+      right: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 99;
+    }
+
+    nav a,
+    nav button {
+      backdrop-filter: blur(10px);
+      background: var(--glass);
+      padding: 0.8rem 1rem;
+      border-radius: var(--radius);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav a:hover,
+    nav button:hover {
+      background: var(--accent2);
+      transform: scale(1.05);
+    }
+
+    /* ===== HEADER NOVO LAYOUT ===== */
+    header {
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    header img {
+      width: 190px;
+      border-radius: 50%;
+      filter: drop-shadow(var(--shadow));
+    }
+
+    .header-info h1 {
+      margin: 0;
+      font-size: 2.1rem;
+    }
+
+    .header-info p {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+    }
+
+    .social {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social img {
+      width: 34px;
+      transition: 0.2s;
+    }
+
+    .social img:hover {
+      transform: scale(1.1);
+    }
+
+    /* ===== SEÇÕES ===== */
+    section {
+      padding: 2.5rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--accent2);
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    /* ===== STACK ===== */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .stack-card {
+      background: var(--glass);
+      backdrop-filter: blur(14px);
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow2);
+    }
+
+    .stack-card img {
+      width: 60px;
+      margin-bottom: 0.6rem;
+    }
+
+    /* ===== PROJETOS & GERAL CARDS ===== */
+    .grid-container {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: var(--glass);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img.preview {
+      width: 100%;
+      border-radius: var(--radius);
+      margin-bottom: 0.7rem;
+      object-fit: cover;
+      height: 160px;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      color: var(--accent);
+    }
+
+    .card p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .card .meta {
+      font-size: 0.8rem;
+      color: var(--accent2);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .github-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+    }
+
+    .github-link img {
+      width: 30px;
+      transition: 0.2s;
+    }
+
+    .github-link img:hover {
+      transform: scale(1.1);
+    }
+
+    /* ===== CONTATO ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    input,
+    textarea {
+      padding: 1rem;
+      background: var(--glass);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      backdrop-filter: blur(8px);
+      font-family: inherit;
+    }
+
+    button {
+      padding: 1rem;
+      background: var(--accent2);
+      border: none;
+      border-radius: var(--radius);
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: var(--shadow2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      filter: brightness(1.1);
+    }
+
+    footer {
+      text-align: center;
+      opacity: 0.6;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--glass);
+    }
+
+    /* ===== NOVO HERO SECTION E DESIGN CRIATIVO ===== */
+    .hero {
+      width: 100%;
+      padding: 6rem 1.5rem 5rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 30%, rgba(59, 199, 255, 0.18), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(255, 170, 51, 0.20), transparent 60%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      filter: blur(40px);
+      z-index: 1;
+    }
+
+    .hero-wrapper {
+      max-width: 1300px;
+      margin: auto;
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 3.2rem;
+      padding: 1rem;
+    }
+
+    .hero-photo {
+      width: 400px;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 34px rgba(59, 199, 255, 0.55));
+    }
+
+    .hero-info h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-info p {
+      margin-top: 0.4rem;
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+
+    .hero-info .social img {
+      width: 42px !important;
+    }
+
+    /* Ajuste responsivo */
+    @media (max-width: 820px) {
+      .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-photo {
+        width: 260px;
+      }
+
+      .hero-info h1 {
+        font-size: 2.4rem;
+      }
+
+      nav {
+        top: auto;
+        bottom: 1rem;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: row;
+        width: 90%;
+        justify-content: center;
+      }
+
+      nav a span {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <button onclick="changeLanguage('pt')">🇧🇷</button>
+    <button onclick="changeLanguage('en')">🇺🇸</button>
+    <a href="#sobre"><span data-i18n="menu_home">Sobre</span></a>
+    <a href="#stack"><span data-i18n="menu_skills">Stack</span></a>
+    <a href="#education"><span data-i18n="menu_education">Formação</span></a>
+    <a href="#projetos"><span data-i18n="menu_projects">Projetos</span></a>
+    <a href="#eventos"><span data-i18n="menu_events">Eventos</span></a>
+    <a href="#contato"><span data-i18n="menu_contact">Contato</span></a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-wrapper">
+      <img src="img/profile_img.png" alt="Foto" class="hero-photo"
+        onerror="this.onerror=null; this.src='https://placehold.co/400x400/0F0F0F/A3A3A3?text=FOTO';" />
+      <div class="hero-info">
+        <h1>Plínio Mabesi</h1>
+        <p data-i18n="role_title">Blockchain & Web3 Full-Stack Developer</p>
+        <div class="social">
+          <a href="https://github.com/mabesi" target="_blank"><img src="img/github.png" /></a>
+          <a href="https://linkedin.com/in/pliniomabesi" target="_blank"><img src="img/linkedin.png" /></a>
+          <a href="https://x.com/pliniomabesi" target="_blank"><img src="img/x.png" /></a>
+          <a href="https://instagram.com/pliniomabesi" target="_blank"><img src="img/instagram.png" /></a>
+          <a href="mailto:contato@mabesi.dev"><img src="img/mail.png" /></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="sobre">
+    <h2 data-i18n="about_title">Sobre mim</h2>
+    <p data-i18n="about_text_1">
+      Desenvolvedor Full-Stack especializado em Blockchain e Web3, criando soluções que combinam
+      smart contracts, DApps, automações on-chain e integrações Web2 + Web3. Experiência prática
+      em projetos pessoais e protótipos avançados envolvendo contratos Solidity, aplicações React/Next,
+      integração com carteiras e arquitetura descentralizada.
+    </p>
+    <br>
+    <p data-i18n="about_text_2">
+      Construo smart contracts, dApps, APIs e interfaces de usuário usando Solidity, Hardhat, Node.js, React e fluxos de
+      trabalho assistidos por IA.
+    </p>
+  </section>
+
+  <section id="stack">
+    <h2 data-i18n="skills_title">Principais Competências</h2>
+    <div class="stack-grid">
+      <div class="stack-card"><img src="img/solidity.png">
+        <p>Solidity</p>
+      </div>
+      <div class="stack-card"><img src="img/hardhat.png">
+        <p>Hardhat</p>
+      </div>
+      <div class="stack-card"><img src="img/react.png">
+        <p>React / Next</p>
+      </div>
+      <div class="stack-card"><img src="img/node.png">
+        <p>Node / Express</p>
+      </div>
+      <div class="stack-card"><img src="img/ts.png">
+        <p>TypeScript</p>
+      </div>
+
+      <div class="stack-card"><img src="img/python.png">
+        <p>Python</p>
+      </div>
+      <div class="stack-card"><img src="img/php.png">
+        <p>PHP</p>
+      </div>
+      <div class="stack-card"><img src="img/laravel.png">
+        <p>Laravel</p>
+      </div>
+      <div class="stack-card"><img src="img/mysql.png">
+        <p>MySQL</p>
+      </div>
+      <div class="stack-card"><img src="img/mongo-db.png">
+        <p>Mongodb</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 data-i18n="education_title">Formação Acadêmica</h2>
+    <div class="grid-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="meta">2017 - 2018</div>
+        <h3>PUC Minas</h3>
+        <p data-i18n="edu_1_course">Especialização em Desenvolvimento Web</p>
+        <p style="font-size: 0.85rem; opacity: 0.7;" data-i18n="edu_1_desc">Foco em tecnologias web modernas,
+          arquitetura de software e melhores práticas de engenharia.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="meta">2009 - 2011</div>
+        <h3>Universidade Paulista</h3>
+        <p data-i18n="edu_2_course">Tecnólogo em Gestão de TI</p>
+        <p style="font-size: 0.85rem; opacity: 0.7;" data-i18n="edu_2_desc">Gestão de sistemas de informação, processos
+          de negócios e infraestrutura de TI.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="meta">2003 - 2006</div>
+        <h3>UFPA</h3>
+        <p data-i18n="edu_3_course">Bacharelado em Sistemas de Informação</p>
+        <p style="font-size: 0.85rem; opacity: 0.7;" data-i18n="edu_3_desc">Fundamentos de ciência da computação,
+          desenvolvimento de sistemas e administração.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2 data-i18n="projects_title">Projetos em Destaque</h2>
+    <div class="grid-container">
+
+      <!-- Cerberus -->
+      <div class="card">
+        <div class="meta">DEX TRADER BOT</div>
+        <h3>Cerberus</h3>
+        <p data-i18n="proj_cerberus_desc">Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3,
+          autenticação segura e monitoramento de mercado.</p>
+        <div style="display:flex; gap:0.8rem;">
+          <a class="github-link" href="https://github.com/mabesi/cerberus" target="_blank"><img
+              src="img/github.png" /></a>
+          <a href="https://apps.mabesi.dev/cerberus" target="_blank"><img src="img/link.png" style="width:30px;" /></a>
+        </div>
+      </div>
+
+      <!-- MySplit -->
+      <div class="card">
+        <div class="meta">MOBILE APP</div>
+        <h3>MySplit</h3>
+        <p data-i18n="proj_mysplit_desc">App de divisão de despesas compartilhadas. Lógica de tempo real, autenticação e
+          estrutura de banco de dados completa.</p>
+        <div style="display:flex; gap:0.8rem;">
+          <a class="github-link" href="https://github.com/mabesi/mysplit" target="_blank"><img
+              src="img/github.png" /></a>
+          <a href="https://apps.mabesi.dev/mysplit" target="_blank"><img src="img/link.png" style="width:30px;" /></a>
+        </div>
+      </div>
+
+      <!-- Cadrimil -->
+      <div class="card">
+        <div class="meta">UTILITY APP</div>
+        <h3>Cadrimil</h3>
+        <p data-i18n="proj_cadrimil_desc">App para cálculo de diárias de viagens para militares. Simulação de valores
+          baseada em posto, localidade e período.</p>
+        <div style="display:flex; gap:0.8rem;">
+          <a class="github-link" href="https://github.com/mabesi/cadrimil" target="_blank"><img
+              src="img/github.png" /></a>
+          <a href="https://apps.mabesi.dev/cadrimil" target="_blank"><img src="img/link.png" style="width:30px;" /></a>
+        </div>
+      </div>
+
+      <!-- GEANA -->
+      <div class="card">
+        <div class="meta">DATA VISUALIZATION</div>
+        <h3>GEANA</h3>
+        <p data-i18n="proj_geana_desc">Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e
+          relatório de dados de radar.</p>
+        <div style="display:flex; gap:0.8rem;">
+          <a href="https://apps.mabesi.dev/geana" target="_blank"><img src="img/link.png" style="width:30px;" /></a>
+        </div>
+      </div>
+
+      <!-- RDSIM -->
+      <div class="card">
+        <div class="meta">SIMULATION</div>
+        <h3>RDSIM</h3>
+        <p data-i18n="proj_rdsim_desc">Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos
+          para treinamento operacional.</p>
+        <div style="display:flex; gap:0.8rem;">
+          <a href="https://apps.mabesi.dev/rdsim" target="_blank"><img src="img/link.png" style="width:30px;" /></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="eventos">
+    <h2 data-i18n="events_title">Participação em Eventos</h2>
+    <div class="grid-container">
+      <!-- Evento 1 -->
+      <div class="card" style="text-align: center; align-items: center;">
+        <img src="img/mabesiapps_logo.png" style="width: 50px; margin-bottom: 1rem; opacity: 0.8;">
+        <h3>Ethereum Rio 2024</h3>
+        <p data-i18n="event_1_desc">Participação no principal evento de Ethereum da América Latina, focado em inovação e
+          Web3.</p>
+        <span style="color: var(--accent2); font-size: 0.8rem; font-weight: bold;">Rio de Janeiro, BR</span>
+      </div>
+      <!-- Evento 2 -->
+      <div class="card" style="text-align: center; align-items: center;">
+        <img src="img/mabesiapps_logo.png" style="width: 50px; margin-bottom: 1rem; opacity: 0.8;">
+        <h3>Blockchain Festival</h3>
+        <p data-i18n="event_2_desc">Networking com desenvolvedores e workshops sobre as novas tendências de DeFi e NFTs.
+        </p>
+        <span style="color: var(--accent2); font-size: 0.8rem; font-weight: bold;">São Paulo, BR</span>
+      </div>
+      <!-- Evento 3 -->
+      <div class="card" style="text-align: center; align-items: center;">
+        <img src="img/mabesiapps_logo.png" style="width: 50px; margin-bottom: 1rem; opacity: 0.8;">
+        <h3>Hackathon Web3 Global</h3>
+        <p data-i18n="event_3_desc">Competição global de desenvolvimento de dApps. Desenvolvimento de protótipos em 48h.
+        </p>
+        <span style="color: var(--accent2); font-size: 0.8rem; font-weight: bold;">Online</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2 data-i18n="contact_title">Contato</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Nome" required data-i18n-placeholder="form_name_ph" />
+      <input type="email" name="email" placeholder="Email" required data-i18n-placeholder="form_email_ph" />
+      <textarea name="message" rows="6" placeholder="Mensagem" required
+        data-i18n-placeholder="form_message_ph"></textarea>
+      <button type="submit" id="submit-button" data-i18n="form_submit">ENVIAR MENSAGEM</button>
+    </form>
+    <div id="form-message" style="margin-top: 1rem; text-align: center; color: var(--accent); display: none;"></div>
+  </section>
+
+  <footer>
+    © 2025 Mabesi.dev — Plínio Mabesi
+  </footer>
+
+  <script>
+    // --- MULTILINGUAL SUPPORT ---
+    const translations = {
+      pt: {
+        menu_home: "Sobre",
+        menu_skills: "Stack",
+        menu_education: "Formação",
+        menu_projects: "Projetos",
+        menu_events: "Eventos",
+        menu_contact: "Contato",
+        role_title: "Blockchain & Web3 Full-Stack Developer",
+        about_title: "Sobre mim",
+        about_text_1: "Desenvolvedor Full-Stack especializado em Blockchain e Web3, criando soluções que combinam smart contracts, DApps, automações on-chain e integrações Web2 + Web3. Experiência prática em projetos pessoais e protótipos avançados envolvendo contratos Solidity, aplicações React/Next, integração com carteiras e arquitetura descentralizada.",
+        about_text_2: "Construo smart contracts, dApps, APIs e interfaces de usuário usando Solidity, Hardhat, Node.js, React e fluxos de trabalho assistidos por IA.",
+        skills_title: "Principais Competências",
+        education_title: "Formação Acadêmica",
+        edu_1_course: "Especialização em Desenvolvimento Web",
+        edu_1_desc: "Foco em tecnologias web modernas, arquitetura de software e melhores práticas de engenharia.",
+        edu_2_course: "Tecnólogo em Gestão de TI",
+        edu_2_desc: "Gestão de sistemas de informação, processos de negócios e infraestrutura de TI.",
+        edu_3_course: "Bacharelado em Sistemas de Informação",
+        edu_3_desc: "Fundamentos de ciência da computação, desenvolvimento de sistemas e administração.",
+        projects_title: "Projetos em Destaque",
+        proj_cerberus_desc: "Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3, autenticação segura e monitoramento de mercado.",
+        proj_mysplit_desc: "App de divisão de despesas compartilhadas. Lógica de tempo real, autenticação e estrutura de banco de dados completa.",
+        proj_cadrimil_desc: "App para cálculo de diárias de viagens para militares. Simulação de valores baseada em posto, localidade e período.",
+        proj_geana_desc: "Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e relatório de dados de radar.",
+        proj_rdsim_desc: "Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos para treinamento operacional.",
+        events_title: "Participação em Eventos",
+        event_1_desc: "Participação no principal evento de Ethereum da América Latina, focado em inovação e Web3.",
+        event_2_desc: "Networking com desenvolvedores e workshops sobre as novas tendências de DeFi e NFTs.",
+        event_3_desc: "Competição global de desenvolvimento de dApps. Desenvolvimento de protótipos em 48h.",
+        contact_title: "Contato",
+        form_name_ph: "Nome",
+        form_email_ph: "Email",
+        form_message_ph: "Mensagem",
+        form_submit: "ENVIAR MENSAGEM",
+        form_success: "[SUCCESS] Mensagem enviada com sucesso.",
+        form_processing: "PROCESSANDO..."
+      },
+      en: {
+        menu_home: "About",
+        menu_skills: "Stack",
+        menu_education: "Education",
+        menu_projects: "Projects",
+        menu_events: "Events",
+        menu_contact: "Contact",
+        role_title: "Blockchain & Web3 Full-Stack Developer",
+        about_title: "About Me",
+        about_text_1: "Blockchain & Web3 Full-Stack Developer specializing in creating solutions that combine smart contracts, DApps, on-chain automation, and Web2 + Web3 integrations. Practical experience in personal projects and advanced prototypes involving Solidity contracts, React/Next applications, wallet integration, and decentralized architecture.",
+        about_text_2: "I build smart contracts, dApps, APIs, and user interfaces using Solidity, Hardhat, Node.js, React, and AI-assisted workflows.",
+        skills_title: "Core Skills",
+        education_title: "Academic Background",
+        edu_1_course: "Specialization in Web Development",
+        edu_1_desc: "Focus on modern web technologies, software architecture, and engineering best practices.",
+        edu_2_course: "Technologist in IT Management",
+        edu_2_desc: "Management of information systems, business processes, and IT infrastructure.",
+        edu_3_course: "Bachelor in Information Systems",
+        edu_3_desc: "Fundamentals of computer science, systems development, and administration.",
+        projects_title: "Featured Projects",
+        proj_cerberus_desc: "Educational SaaS platform for DEX operation automation. Web2 + Web3, secure authentication, and market monitoring.",
+        proj_mysplit_desc: "Shared expense splitting app. Real-time logic, authentication, and complete database structure.",
+        proj_cadrimil_desc: "App for calculating travel allowances for military personnel. Simulation based on rank, location, and period.",
+        proj_geana_desc: "Electronic Signal Analysis System. Interfaces for filtering, analyzing, and reporting radar data.",
+        proj_rdsim_desc: "Radio Control Panel & Data Link Simulator. Interactive components for operational training.",
+        events_title: "Events Participation",
+        event_1_desc: "Participation in the main Ethereum event in Latin America, focused on innovation and Web3.",
+        event_2_desc: "Networking with developers and workshops on new DeFi and NFT trends.",
+        event_3_desc: "Global dApp development competition. Prototype development in 48h.",
+        contact_title: "Contact",
+        form_name_ph: "Name",
+        form_email_ph: "Email",
+        form_message_ph: "Message",
+        form_submit: "SEND MESSAGE",
+        form_success: "[SUCCESS] Message sent successfully.",
+        form_processing: "PROCESSING..."
+      }
+    };
+
+    let currentLang = 'pt';
+
+    function changeLanguage(lang) {
+      currentLang = lang;
+      // Text content
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      // Placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+          element.setAttribute('placeholder', translations[lang][key]);
+        }
+      });
+      // Persist preference
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    // Load saved language or default to PT
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'pt';
+      changeLanguage(savedLang);
+    });
+
+    // --- FORM HANDLING ---
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const submitButton = document.getElementById('submit-button');
+      const formMessage = document.getElementById('form-message');
+      const processingText = translations[currentLang].form_processing;
+      const successText = translations[currentLang].form_success;
+
+      submitButton.disabled = true;
+      submitButton.textContent = processingText;
+
+      setTimeout(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = translations[currentLang].form_submit;
+
+        const txID = 'MSG-' + Math.random().toString(36).substring(2, 6).toUpperCase();
+
+        formMessage.style.display = 'block';
+        formMessage.textContent = `${successText} ID: ${txID}.`;
+
+        document.getElementById('contact-form').reset();
+
+        setTimeout(() => {
+          formMessage.style.display = 'none';
+        }, 7000);
+
+      }, 2000);
+    });
+  </script>
+
+</body>
+
+</html>

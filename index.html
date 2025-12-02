@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo-Dashboard Minimalista - [Seu Nome]</title>
+    <title>Plinio Mabesi - Blockchain & Web3 Developer</title>
     <!-- Carrega o Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configuração do Tailwind para Cores e Fonte Moderna -->
@@ -43,7 +43,7 @@
     </script>
     <!-- Carrega a fonte Inter do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <!-- Ícones Lucide (Ainda usados para ícones gerais de seção) -->
+    <!-- Ícones Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Estilos Globais */
@@ -139,37 +139,52 @@
     <header class="fixed top-0 left-0 right-0 bg-bg-deep-black/95 backdrop-blur-sm border-b border-accent-lime/30 z-50 p-4 shadow-custom">
         <nav class="content-container mx-auto flex justify-between items-center px-4">
             <h1 class="text-xl font-extrabold text-accent-lime flex items-center space-x-2 animate-pulse-slow">
-                <i data-lucide="shield-check" class="w-6 h-6"></i>
-                <span>[SEU NOME] | DASHBOARD ONLINE</span>
+                <i data-lucide="terminal" class="w-6 h-6"></i>
+                <span data-i18n="header_title">PLINIO MABESI | DEV PORTFOLIO</span>
             </h1>
-            <a href="#contact-module" class="px-3 py-1 text-sm font-medium bg-accent-yellow/10 text-accent-yellow rounded-lg hover:bg-accent-yellow/30 transition duration-200 flex items-center space-x-1">
-                <i data-lucide="corner-down-right" class="w-4 h-4"></i>
-                <span>CONTATO</span>
-            </a>
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher -->
+                <div class="flex space-x-2">
+                    <button onclick="changeLanguage('pt')" class="hover:opacity-80 transition-opacity" title="Português">
+                        <span class="text-2xl">🇧🇷</span>
+                    </button>
+                    <button onclick="changeLanguage('en')" class="hover:opacity-80 transition-opacity" title="English">
+                        <span class="text-2xl">🇺🇸</span>
+                    </button>
+                </div>
+                <a href="#contact-module" class="px-3 py-1 text-sm font-medium bg-accent-yellow/10 text-accent-yellow rounded-lg hover:bg-accent-yellow/30 transition duration-200 flex items-center space-x-1">
+                    <i data-lucide="corner-down-right" class="w-4 h-4"></i>
+                    <span data-i18n="nav_contact">CONTATO</span>
+                </a>
+            </div>
         </nav>
     </header>
 
     <!-- FLOATING NAVIGATION MENU (Lateral Direita) -->
     <nav id="floating-menu" class="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block bg-bg-deep-black/70 backdrop-blur-sm p-2 rounded-l-xl border-y border-l border-accent-lime/30 shadow-custom">
         <a href="#intro-module" class="floating-menu-item group" data-section="intro-module">
-            <i data-lucide="aperture" class="w-5 h-5 group-hover:text-accent-yellow"></i>
-            <span>INÍCIO</span>
+            <i data-lucide="user" class="w-5 h-5 group-hover:text-accent-yellow"></i>
+            <span data-i18n="menu_home">INÍCIO</span>
         </a>
         <a href="#skills-module" class="floating-menu-item group" data-section="skills-module">
-            <i data-lucide="area-chart" class="w-5 h-5 group-hover:text-accent-yellow"></i>
-            <span>SKILLS</span>
+            <i data-lucide="cpu" class="w-5 h-5 group-hover:text-accent-yellow"></i>
+            <span data-i18n="menu_skills">SKILLS</span>
+        </a>
+        <a href="#education-module" class="floating-menu-item group" data-section="education-module">
+            <i data-lucide="graduation-cap" class="w-5 h-5 group-hover:text-accent-yellow"></i>
+            <span data-i18n="menu_education">FORMAÇÃO</span>
         </a>
         <a href="#projects-module" class="floating-menu-item group" data-section="projects-module">
-            <i data-lucide="layout-dashboard" class="w-5 h-5 group-hover:text-accent-yellow"></i>
-            <span>PROJETOS</span>
+            <i data-lucide="code-2" class="w-5 h-5 group-hover:text-accent-yellow"></i>
+            <span data-i18n="menu_projects">PROJETOS</span>
         </a>
         <a href="#events-module" class="floating-menu-item group" data-section="events-module">
             <i data-lucide="calendar" class="w-5 h-5 group-hover:text-accent-yellow"></i>
-            <span>EVENTOS</span>
+            <span data-i18n="menu_events">EVENTOS</span>
         </a>
         <a href="#contact-module" class="floating-menu-item group" data-section="contact-module">
             <i data-lucide="send" class="w-5 h-5 group-hover:text-accent-yellow"></i>
-            <span>CONTATO</span>
+            <span data-i18n="menu_contact">CONTATO</span>
         </a>
     </nav>
 
@@ -181,37 +196,53 @@
                 
                 <!-- Coluna da Foto (4/12 na Lg) -->
                 <div class="lg:col-span-4 flex justify-center lg:justify-start mb-8 lg:mb-0">
-                    <!-- Placeholder de Foto Estilizada (Estilo Integrado) -->
                     <div class="relative w-64 h-80 bg-bg-card-dark p-3 border-4 border-accent-yellow/50 rounded-2xl shadow-lime-glow overflow-hidden rotate-1">
-                        <!-- Imagem: Maior e com estilo integrado -->
-                        <img src="https://placehold.co/256x320/0F0F0F/84CC16?text=FOTO%20INTEGRADA%0A%5BSEU%20PERFIL%5D" 
-                             alt="Foto Estilizada do Desenvolvedor" 
+                        <!-- Imagem: Foto Pessoal -->
+                        <img src="img/profile_img.png" 
+                             alt="Plinio Mabesi" 
                              class="w-full h-full object-cover rounded-xl opacity-90 transition duration-500 hover:scale-[1.02] hover:opacity-100" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/256x320/0F0F0F/A3A3A3?text=FOTO%20INDISPON%C3%8DVEL';">
-                        <!-- Efeito de sobreposição ou "glitch" -->
+                             onerror="this.onerror=null; this.src='https://placehold.co/256x320/0F0F0F/A3A3A3?text=FOTO';">
                         <div class="absolute inset-0 border-4 border-accent-lime/50 rounded-2xl pointer-events-none transition duration-500 hover:border-accent-yellow"></div>
                     </div>
                 </div>
 
                 <!-- Coluna do Texto (8/12 na Lg) -->
                 <div class="lg:col-span-8 lg:text-left text-center">
-                    <span class="text-sm font-semibold uppercase tracking-widest text-accent-yellow animate-pulse-slow mb-4 block">
-                        [STATUS: ATIVO]
+                    <span class="text-sm font-semibold uppercase tracking-widest text-accent-yellow animate-pulse-slow mb-4 block" data-i18n="status_active">
+                        [STATUS: OPEN TO WORK]
                     </span>
                     <h2 class="text-5xl md:text-7xl font-black text-text-light mb-4 leading-tight">
-                        Engenharia de Software
+                        Plinio Mabesi
                     </h2>
-                    <h1 class="text-2xl md:text-4xl font-light text-accent-lime mb-8">
-                        Arquiteto e Desenvolvedor Full-Stack
+                    <h1 class="text-2xl md:text-3xl font-light text-accent-lime mb-8" data-i18n="role_title">
+                        Blockchain & Web3 Full-Stack Developer
                     </h1>
                     
-                    <p class="text-lg text-text-muted mb-10 max-w-3xl lg:max-w-none">
-                        Especializado em construir sistemas escaláveis e interfaces performáticas. Meu foco é na excelência do código e na entrega de valor com tecnologias de ponta. Com uma paixão por arquitetura limpa e soluções eficientes, transformo requisitos complexos em aplicações robustas e seguras.
+                    <p class="text-lg text-text-muted mb-6 max-w-3xl lg:max-w-none" data-i18n="about_text_1">
+                        Desenvolvedor Full-Stack Blockchain & Web3 em transição de carreira, focado em contratos inteligentes, aplicações descentralizadas e design de sistemas seguros.
+                    </p>
+                    <p class="text-lg text-text-muted mb-10 max-w-3xl lg:max-w-none" data-i18n="about_text_2">
+                        Construo smart contracts, dApps, APIs e interfaces de usuário usando Solidity, Hardhat, Node.js, React e fluxos de trabalho assistidos por IA.
                     </p>
                     
-                    <a href="#skills-module" class="px-8 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-full hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 flex items-center justify-center lg:justify-start space-x-2 w-max text-lg mx-auto lg:mx-0">
-                        <i data-lucide="area-chart" class="w-6 h-6"></i>
-                        <span>VISUALIZAR MATRIZ DE COMPETÊNCIAS</span>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+                        <a href="https://linkedin.com/in/pliniomabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
+                            <img src="img/linkedin.png" alt="LinkedIn" class="w-6 h-6">
+                        </a>
+                        <a href="https://github.com/mabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
+                            <img src="img/github.png" alt="GitHub" class="w-6 h-6">
+                        </a>
+                        <a href="https://x.com/pliniomabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
+                            <img src="img/x.png" alt="X / Twitter" class="w-6 h-6">
+                        </a>
+                        <a href="https://instagram.com/pliniomabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
+                            <img src="img/instagram.png" alt="Instagram" class="w-6 h-6">
+                        </a>
+                    </div>
+
+                    <a href="#projects-module" class="px-8 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-full hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 flex items-center justify-center lg:justify-start space-x-2 w-max text-lg mx-auto lg:mx-0">
+                        <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                        <span data-i18n="btn_view_projects">VER PROJETOS</span>
                     </a>
                 </div>
             </div>
@@ -221,92 +252,77 @@
     <!-- SEPARADOR -->
     <div class="content-container mx-auto px-4"><div class="divider"></div></div>
 
-    <!-- 2. COMPETÊNCIAS (MATRIZ DE DADOS COM ÍCONES ESPECÍFICOS) -->
+    <!-- 2. COMPETÊNCIAS -->
     <section id="skills-module" class="dashboard-section pt-0">
         <div class="content-container">
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4">
-                Matriz de Competências Técnicas
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="skills_title">
+                Competências Técnicas
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Skill Set 1: Frontend/UI -->
+                <!-- Blockchain -->
                 <div class="data-card p-6">
                     <p class="text-2xl font-extrabold text-accent-lime mb-4 flex items-center space-x-3">
-                        <i data-lucide="layout-grid" class="w-7 h-7 text-accent-yellow"></i>
-                        Interface & Experiência
+                        <i data-lucide="blocks" class="w-7 h-7 text-accent-yellow"></i>
+                        <span data-i18n="skill_blockchain">Blockchain & Smart Contracts</span>
                     </p>
-                    <p class="text-text-muted mb-4 text-sm">Frameworks Reativos e Estilização Avançada.</p>
                     <div class="space-y-3 text-text-light text-base pl-0">
-                        <!-- Ícones de Tecnologia: React, TypeScript, Tailwind -->
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo React (Ciano) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/61DAFB?text=R" alt="Logo React" class="w-6 h-6 rounded-full shadow-md">
-                            <p>React, Next.js</p>
+                            <img src="img/solidity.png" alt="Solidity" class="w-6 h-6 object-contain">
+                            <p>Solidity, Ethers.js</p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo TypeScript (Azul Escuro) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/007ACC?text=TS" alt="Logo TypeScript" class="w-6 h-6 rounded-full shadow-md">
-                            <p>TypeScript, JavaScript ES6+</p>
+                            <img src="img/hardhat.png" alt="Hardhat" class="w-6 h-6 object-contain">
+                            <p>Hardhat, OpenZeppelin</p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo Tailwind CSS (Ciano Escuro) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/06B6D4?text=TW" alt="Logo Tailwind CSS" class="w-6 h-6 rounded-full shadow-md">
-                            <p>Tailwind CSS, SCSS</p>
+                            <i data-lucide="link" class="w-6 h-6 text-accent-lime"></i>
+                            <p>Gas Optimization, Testing</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skill Set 2: Backend/Logic -->
+                <!-- Web3 Dev -->
                 <div class="data-card p-6">
                     <p class="text-2xl font-extrabold text-accent-lime mb-4 flex items-center space-x-3">
-                        <i data-lucide="server" class="w-7 h-7 text-accent-yellow"></i>
-                        Lógica de Servidor & APIs
+                        <i data-lucide="wallet" class="w-7 h-7 text-accent-yellow"></i>
+                        <span data-i18n="skill_web3">Web3 Development</span>
                     </p>
-                    <p class="text-text-muted mb-4 text-sm">Desenvolvimento de APIs robustas e performáticas.</p>
                     <div class="space-y-3 text-text-light text-base pl-0">
-                        <!-- Ícones de Tecnologia: Node.js, GoLang, Python -->
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo Node.js (Verde) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/6DA55E?text=NODE" alt="Logo Node.js" class="w-6 h-6 rounded-full shadow-md">
-                            <p>Node.js, Express, NestJS</p>
+                            <i data-lucide="app-window" class="w-6 h-6 text-accent-lime"></i>
+                            <p>dApps, Wallet Integration</p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo GoLang (Azul) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/00ADD8?text=GO" alt="Logo GoLang" class="w-6 h-6 rounded-full shadow-md">
-                            <p>GoLang, Python</p>
+                            <i data-lucide="activity" class="w-6 h-6 text-accent-lime"></i>
+                            <p>Event Listeners</p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo GraphQL (Pink) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/E10098?text=QL" alt="Logo GraphQL" class="w-6 h-6 rounded-full shadow-md">
-                            <p>GraphQL, REST</p>
+                            <i data-lucide="coins" class="w-6 h-6 text-accent-lime"></i>
+                            <p>Token/NFT Mechanics</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skill Set 3: Infra & Data -->
+                <!-- Full Stack -->
                 <div class="data-card p-6">
                     <p class="text-2xl font-extrabold text-accent-lime mb-4 flex items-center space-x-3">
-                        <i data-lucide="cloud-cog" class="w-7 h-7 text-accent-yellow"></i>
-                        Cloud & DevOps
+                        <i data-lucide="layers" class="w-7 h-7 text-accent-yellow"></i>
+                        <span data-i18n="skill_fullstack">Full-Stack JavaScript</span>
                     </p>
-                    <p class="text-text-muted mb-4 text-sm">Implantação, Monitoramento e Gerenciamento de Dados.</p>
                     <div class="space-y-3 text-text-light text-base pl-0">
-                        <!-- Ícones de Tecnologia: AWS, Docker, PostgreSQL -->
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo AWS (Laranja) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/FF9900?text=AWS" alt="Logo AWS" class="w-6 h-6 rounded-full shadow-md">
-                            <p>AWS, GCP, Azure</p>
+                            <img src="img/react.png" alt="React" class="w-6 h-6 object-contain">
+                            <p>React, React Native (Expo)</p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo Docker (Azul) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/2496ED?text=D" alt="Logo Docker" class="w-6 h-6 rounded-full shadow-md">
-                            <p>Docker, Kubernetes (K8s)</p>
+                            <img src="img/node.png" alt="Node" class="w-6 h-6 object-contain">
+                            <p>Node.js, Firebase</p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <!-- Placeholder Logo PostgreSQL (Azul Escuro) - Fundo Card Dark (0F0F0F) -->
-                            <img src="https://placehold.co/24x24/0F0F0F/336791?text=PG" alt="Logo PostgreSQL" class="w-6 h-6 rounded-full shadow-md">
-                            <p>PostgreSQL, MongoDB, Redis</p>
+                            <img src="img/ts.png" alt="TypeScript" class="w-6 h-6 object-contain">
+                            <p>TypeScript, REST APIs</p>
                         </div>
                     </div>
                 </div>
@@ -317,70 +333,159 @@
     <!-- SEPARADOR -->
     <div class="content-container mx-auto px-4"><div class="divider"></div></div>
 
-    <!-- 3. PROJETOS (VISUALIZAÇÃO DE PROJETOS) -->
+    <!-- 3. FORMAÇÃO (NOVA SEÇÃO) -->
+    <section id="education-module" class="dashboard-section pt-0">
+        <div class="content-container">
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="education_title">
+                Formação Acadêmica
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="data-card p-6 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                        <i data-lucide="graduation-cap" class="w-24 h-24 text-accent-lime"></i>
+                    </div>
+                    <p class="text-sm text-accent-yellow font-bold mb-2">2017 - 2018</p>
+                    <h3 class="text-xl font-bold text-text-light mb-1">PUC Minas</h3>
+                    <p class="text-accent-lime font-medium mb-4" data-i18n="edu_1_course">Especialização em Desenvolvimento Web</p>
+                    <p class="text-text-muted text-sm" data-i18n="edu_1_desc">Foco em tecnologias web modernas, arquitetura de software e melhores práticas de engenharia.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="data-card p-6 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                        <i data-lucide="book-open" class="w-24 h-24 text-accent-lime"></i>
+                    </div>
+                    <p class="text-sm text-accent-yellow font-bold mb-2">2009 - 2011</p>
+                    <h3 class="text-xl font-bold text-text-light mb-1">Universidade Paulista</h3>
+                    <p class="text-accent-lime font-medium mb-4" data-i18n="edu_2_course">Tecnólogo em Gestão de TI</p>
+                    <p class="text-text-muted text-sm" data-i18n="edu_2_desc">Gestão de sistemas de informação, processos de negócios e infraestrutura de TI.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="data-card p-6 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                        <i data-lucide="award" class="w-24 h-24 text-accent-lime"></i>
+                    </div>
+                    <p class="text-sm text-accent-yellow font-bold mb-2">2003 - 2006</p>
+                    <h3 class="text-xl font-bold text-text-light mb-1">UFPA</h3>
+                    <p class="text-accent-lime font-medium mb-4" data-i18n="edu_3_course">Bacharelado em Sistemas de Informação</p>
+                    <p class="text-text-muted text-sm" data-i18n="edu_3_desc">Fundamentos de ciência da computação, desenvolvimento de sistemas e administração.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="content-container mx-auto px-4"><div class="divider"></div></div>
+
+    <!-- 4. PROJETOS -->
     <section id="projects-module" class="dashboard-section pt-0">
         <div class="content-container">
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4">
-                Portfólio de Aplicações Críticas
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="projects_title">
+                Principais Projetos
             </h2>
 
-            <p class="text-lg max-w-4xl text-text-muted mb-10">
-                Visualize os resultados das principais missões. Substitua os placeholders abaixo com os screenshots reais dos seus projetos.
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Cerberus -->
+                <div class="data-card p-6 flex flex-col">
+                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
+                        <i data-lucide="bot" class="w-16 h-16 text-accent-lime opacity-80"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-light mb-2">Cerberus</h3>
+                    <p class="text-accent-yellow text-xs font-bold mb-3">DEX TRADER BOT</p>
+                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_cerberus_desc">
+                        Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3, autenticação segura e monitoramento de mercado.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Solidity</span>
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Hardhat</span>
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Next.js</span>
+                    </div>
+                    <a href="https://apps.mabesi.dev/cerberus" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
+                    </a>
+                </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                
-                <!-- Projeto 1 com Screenshot Placeholder -->
-                <div class="data-card p-6">
-                    <div class="text-center mb-6">
-                        <!-- Placeholder de Imagem para Screenshot -->
-                        <img src="https://placehold.co/1000x560/0F0F0F/84CC16?text=SNAPSHOT%20PROJETO%20%2301%0A(Substituir%20por%20Print%20do%20Projeto)" 
-                             alt="Placeholder para o Screenshot do Projeto 01" 
-                             class="w-full h-auto border-2 border-accent-lime/50 rounded-lg object-cover shadow-custom">
+                <!-- MySplit -->
+                <div class="data-card p-6 flex flex-col">
+                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
+                        <i data-lucide="smartphone" class="w-16 h-16 text-accent-lime opacity-80"></i>
                     </div>
-                    
-                    <p class="text-2xl font-bold text-accent-yellow mb-2 flex items-center space-x-2">
-                        <i data-lucide="activity" class="w-6 h-6 text-accent-lime"></i>
-                        Sistema de Análise Preditiva
+                    <h3 class="text-xl font-bold text-text-light mb-2">MySplit</h3>
+                    <p class="text-accent-yellow text-xs font-bold mb-3">MOBILE APP</p>
+                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_mysplit_desc">
+                        App de divisão de despesas compartilhadas. Lógica de tempo real, autenticação e estrutura de banco de dados completa.
                     </p>
-                    <p class="text-text-muted text-sm my-2">
-                        Plataforma de visualização de dados em tempo real, utilizando D3.js no frontend e GoLang no backend.
-                    </p>
-                    <ul class="flex space-x-3 text-xs text-text-muted mt-4">
-                        <li class="bg-bg-card-dark border border-accent-lime/50 px-2 py-1 rounded-full text-accent-lime">#Rust</li>
-                        <li class="bg-bg-card-dark border border-accent-lime/50 px-2 py-1 rounded-full text-accent-lime">#Redis</li>
-                        <li class="bg-bg-card-dark border border-accent-lime/50 px-2 py-1 rounded-full text-accent-lime">#D3js</li>
-                    </ul>
-                    <a href="[Link do Projeto 1]" target="_blank" class="text-accent-lime text-base font-medium flex items-center space-x-1 hover:text-accent-lime/80 transition duration-300 mt-4">
-                        <i data-lucide="external-link" class="w-4 h-4"></i> ACESSAR DEMO
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">React Native</span>
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Expo</span>
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Firebase</span>
+                    </div>
+                    <a href="https://apps.mabesi.dev/mysplit" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
                     </a>
                 </div>
-                
-                <!-- Projeto 2 com Screenshot Placeholder -->
-                <div class="data-card p-6">
-                    <div class="text-center mb-6">
-                        <!-- Placeholder de Imagem para Screenshot -->
-                        <img src="https://placehold.co/1000x560/0F0F0F/FBBF24?text=SNAPSHOT%20PROJETO%20%2302%0A(Substituir%20por%20Print%20do%20Projeto)" 
-                             alt="Placeholder para o Screenshot do Projeto 02" 
-                             class="w-full h-auto border-2 border-accent-yellow/50 rounded-lg object-cover shadow-custom">
+
+                <!-- Cadrimil -->
+                <div class="data-card p-6 flex flex-col">
+                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
+                        <i data-lucide="calculator" class="w-16 h-16 text-accent-lime opacity-80"></i>
                     </div>
-                    
-                    <p class="text-2xl font-bold text-accent-yellow mb-2 flex items-center space-x-2">
-                        <i data-lucide="code" class="w-6 h-6 text-accent-lime"></i>
-                        Orquestrador de CI/CD
+                    <h3 class="text-xl font-bold text-text-light mb-2">Cadrimil</h3>
+                    <p class="text-accent-yellow text-xs font-bold mb-3">UTILITY APP</p>
+                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_cadrimil_desc">
+                        App para cálculo de diárias de viagens para militares. Simulação de valores baseada em posto, localidade e período.
                     </p>
-                    <p class="text-text-muted text-sm my-2">
-                        Ferramenta interna para gerenciar pipelines de deployment com integração a Kubernetes e Git Hooks.
-                    </p>
-                    <ul class="flex space-x-3 text-xs text-text-muted mt-4">
-                        <li class="bg-bg-card-dark border border-accent-lime/50 px-2 py-1 rounded-full text-accent-lime">#Kubernetes</li>
-                        <li class="bg-bg-card-dark border border-accent-lime/50 px-2 py-1 rounded-full text-accent-lime">#AWS</li>
-                        <li class="bg-bg-card-dark border border-accent-lime/50 px-2 py-1 rounded-full text-accent-lime">#NextJS</li>
-                    </ul>
-                    <a href="[Link do Projeto 2]" target="_blank" class="text-accent-lime text-base font-medium flex items-center space-x-1 hover:text-accent-lime/80 transition duration-300 mt-4">
-                        <i data-lucide="external-link" class="w-4 h-4"></i> ACESSAR DEMO
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">React Native</span>
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">AsyncStorage</span>
+                    </div>
+                    <a href="https://apps.mabesi.dev/cadrimil" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
                     </a>
                 </div>
+
+                <!-- GEANA -->
+                <div class="data-card p-6 flex flex-col">
+                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
+                        <i data-lucide="bar-chart-2" class="w-16 h-16 text-accent-lime opacity-80"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-light mb-2">GEANA</h3>
+                    <p class="text-accent-yellow text-xs font-bold mb-3">DATA VISUALIZATION</p>
+                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_geana_desc">
+                        Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e relatório de dados de radar.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">JavaScript</span>
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Data Viz</span>
+                    </div>
+                    <a href="https://apps.mabesi.dev/geana" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
+                    </a>
+                </div>
+
+                <!-- RDSIM -->
+                <div class="data-card p-6 flex flex-col">
+                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
+                        <i data-lucide="radio" class="w-16 h-16 text-accent-lime opacity-80"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-light mb-2">RDSIM</h3>
+                    <p class="text-accent-yellow text-xs font-bold mb-3">SIMULATION</p>
+                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_rdsim_desc">
+                        Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos para treinamento operacional.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">JavaScript</span>
+                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Simulation</span>
+                    </div>
+                    <a href="https://apps.mabesi.dev/rdsim" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -388,53 +493,43 @@
     <!-- SEPARADOR -->
     <div class="content-container mx-auto px-4"><div class="divider"></div></div>
 
-    <!-- 4. PARTICIPAÇÃO EM EVENTOS (NOVA SEÇÃO) -->
+    <!-- 5. EVENTOS (NOVA SEÇÃO - PLACEHOLDERS) -->
     <section id="events-module" class="dashboard-section pt-0">
         <div class="content-container">
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4">
-                Participação em Eventos & Conferências
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="events_title">
+                Participação em Eventos
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Evento 1 -->
-                <div class="data-card p-6 flex items-start space-x-4">
-                    <i data-lucide="calendar-check" class="w-10 h-10 flex-shrink-0 text-accent-lime mt-1"></i>
-                    <div>
-                        <p class="text-xl font-bold text-text-light">DevOps Summit Global 2024</p>
-                        <p class="text-text-muted text-sm mb-2">San Francisco, CA | Setembro 2024</p>
-                        <p class="text-base text-text-muted">Apresentador da palestra "Kubernetes em Escala: Otimização de Custos e Performance com K8s".</p>
+                <div class="data-card p-6 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-accent-lime/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="calendar-check" class="w-8 h-8 text-accent-lime"></i>
                     </div>
+                    <h3 class="text-lg font-bold text-text-light mb-2">Ethereum Rio 2024</h3>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_1_desc">Participação no principal evento de Ethereum da América Latina, focado em inovação e Web3.</p>
+                    <span class="text-xs text-accent-yellow font-bold">Rio de Janeiro, BR</span>
                 </div>
 
                 <!-- Evento 2 -->
-                <div class="data-card p-6 flex items-start space-x-4">
-                    <i data-lucide="calendar-check" class="w-10 h-10 flex-shrink-0 text-accent-lime mt-1"></i>
-                    <div>
-                        <p class="text-xl font-bold text-text-light">React Advanced Conference</p>
-                        <p class="text-text-muted text-sm mb-2">Londres, UK | Junho 2023</p>
-                        <p class="text-base text-text-muted">Participação e workshop sobre Server-Side Rendering (SSR) e Next.js para grandes aplicações.</p>
+                <div class="data-card p-6 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-accent-lime/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-accent-lime"></i>
                     </div>
+                    <h3 class="text-lg font-bold text-text-light mb-2">Blockchain Festival</h3>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_2_desc">Networking com desenvolvedores e workshops sobre as novas tendências de DeFi e NFTs.</p>
+                    <span class="text-xs text-accent-yellow font-bold">São Paulo, BR</span>
                 </div>
 
                 <!-- Evento 3 -->
-                <div class="data-card p-6 flex items-start space-x-4">
-                    <i data-lucide="calendar-check" class="w-10 h-10 flex-shrink-0 text-accent-lime mt-1"></i>
-                    <div>
-                        <p class="text-xl font-bold text-text-light">Global Tech Hackathon 2022</p>
-                        <p class="text-text-muted text-sm mb-2">Remoto | Dezembro 2022</p>
-                        <p class="text-base text-text-muted">Vencedor na categoria "Melhor Solução de IoT" com projeto de monitoramento de frota em tempo real.</p>
+                <div class="data-card p-6 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-accent-lime/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="code" class="w-8 h-8 text-accent-lime"></i>
                     </div>
-                </div>
-
-                <!-- Evento 4 -->
-                <div class="data-card p-6 flex items-start space-x-4">
-                    <i data-lucide="calendar-check" class="w-10 h-10 flex-shrink-0 text-accent-lime mt-1"></i>
-                    <div>
-                        <p class="text-xl font-bold text-text-light">Workshop de Segurança de Dados</p>
-                        <p class="text-text-muted text-sm mb-2">São Paulo, BR | Março 2021</p>
-                        <p class="text-base text-text-muted">Certificação em melhores práticas de segurança de APIs e proteção de dados (GDPR/LGPD).</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-text-light mb-2">Hackathon Web3 Global</h3>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_3_desc">Competição global de desenvolvimento de dApps. Desenvolvimento de protótipos em 48h.</p>
+                    <span class="text-xs text-accent-yellow font-bold">Online</span>
                 </div>
 
             </div>
@@ -444,38 +539,38 @@
     <!-- SEPARADOR -->
     <div class="content-container mx-auto px-4"><div class="divider"></div></div>
 
-    <!-- 5. CONTATO (MÓDULO DE CONTATO) -->
+    <!-- 6. CONTATO -->
     <section id="contact-module" class="dashboard-section min-h-screen flex flex-col justify-center items-center pt-0">
         <div class="content-container w-full max-w-2xl p-8 md:p-10 data-card text-center">
             
             <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-8 flex items-center justify-center space-x-3">
-                <i data-lucide="send" class="w-8 h-8 text-accent-lime"></i>
-                <span>Abrir Protocolo de Comunicação</span>
+                <i data-lucide="mail" class="w-8 h-8 text-accent-lime"></i>
+                <span data-i18n="contact_title">Entre em Contato</span>
             </h2>
             
-            <p class="text-text-muted mb-8">
-                Preencha o formulário abaixo para iniciar uma comunicação segura.
+            <p class="text-text-muted mb-8" data-i18n="contact_subtitle">
+                Preencha o formulário abaixo para iniciar uma conversa.
             </p>
 
             <form id="contact-form" class="space-y-4 text-left">
                 <div>
-                    <label for="c_name" class="block text-sm font-medium text-text-muted mb-1">Nome</label>
+                    <label for="c_name" class="block text-sm font-medium text-text-muted mb-1" data-i18n="form_name">Nome</label>
                     <input type="text" id="c_name" name="name" required
                            class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
                 </div>
                 <div>
-                    <label for="c_email" class="block text-sm font-medium text-text-muted mb-1">Email</label>
+                    <label for="c_email" class="block text-sm font-medium text-text-muted mb-1" data-i18n="form_email">Email</label>
                     <input type="email" id="c_email" name="email" required
                            class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
                 </div>
                 <div>
-                    <label for="c_message" class="block text-sm font-medium text-text-muted mb-1">Mensagem</label>
+                    <label for="c_message" class="block text-sm font-medium text-text-muted mb-1" data-i18n="form_message">Mensagem</label>
                     <textarea id="c_message" name="message" rows="5" required
                               class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg"></textarea>
                 </div>
                 <button type="submit" id="submit-button" class="px-6 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-lg hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 w-full flex items-center justify-center space-x-2 text-lg mt-6">
-                    <i data-lucide="send-check" class="w-6 h-6"></i>
-                    <span>ENVIAR MENSAGEM</span>
+                    <i data-lucide="send" class="w-6 h-6"></i>
+                    <span data-i18n="form_submit">ENVIAR MENSAGEM</span>
                 </button>
             </form>
 
@@ -483,64 +578,171 @@
         </div>
     </section>
     
-    <!-- Script JavaScript para a Lógica de Simulação e Navegação Flutuante -->
+    <!-- Script JavaScript -->
     <script>
         // Inicializa os ícones Lucide
         lucide.createIcons();
         
-        // 1. Lógica de Simulação de Envio de Formulário de Contato
+        // --- MULTILINGUAL SUPPORT ---
+        const translations = {
+            pt: {
+                header_title: "PLINIO MABESI | DEV PORTFOLIO",
+                nav_contact: "CONTATO",
+                menu_home: "INÍCIO",
+                menu_skills: "SKILLS",
+                menu_education: "FORMAÇÃO",
+                menu_projects: "PROJETOS",
+                menu_events: "EVENTOS",
+                menu_contact: "CONTATO",
+                status_active: "[STATUS: DISPONÍVEL]",
+                role_title: "Blockchain & Web3 Full-Stack Developer",
+                about_text_1: "Desenvolvedor Full-Stack Blockchain & Web3 em transição de carreira, focado em contratos inteligentes, aplicações descentralizadas e design de sistemas seguros.",
+                about_text_2: "Construo smart contracts, dApps, APIs e interfaces de usuário usando Solidity, Hardhat, Node.js, React e fluxos de trabalho assistidos por IA.",
+                btn_view_projects: "VER PROJETOS",
+                skills_title: "Competências Técnicas",
+                skill_blockchain: "Blockchain & Smart Contracts",
+                skill_web3: "Desenvolvimento Web3",
+                skill_fullstack: "Full-Stack JavaScript",
+                education_title: "Formação Acadêmica",
+                edu_1_course: "Especialização em Desenvolvimento Web",
+                edu_1_desc: "Foco em tecnologias web modernas, arquitetura de software e melhores práticas de engenharia.",
+                edu_2_course: "Tecnólogo em Gestão de TI",
+                edu_2_desc: "Gestão de sistemas de informação, processos de negócios e infraestrutura de TI.",
+                edu_3_course: "Bacharelado em Sistemas de Informação",
+                edu_3_desc: "Fundamentos de ciência da computação, desenvolvimento de sistemas e administração.",
+                projects_title: "Principais Projetos",
+                proj_cerberus_desc: "Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3, autenticação segura e monitoramento de mercado.",
+                proj_mysplit_desc: "App de divisão de despesas compartilhadas. Lógica de tempo real, autenticação e estrutura de banco de dados completa.",
+                proj_cadrimil_desc: "App para cálculo de diárias de viagens para militares. Simulação de valores baseada em posto, localidade e período.",
+                proj_geana_desc: "Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e relatório de dados de radar.",
+                proj_rdsim_desc: "Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos para treinamento operacional.",
+                events_title: "Participação em Eventos",
+                event_1_desc: "Participação no principal evento de Ethereum da América Latina, focado em inovação e Web3.",
+                event_2_desc: "Networking com desenvolvedores e workshops sobre as novas tendências de DeFi e NFTs.",
+                event_3_desc: "Competição global de desenvolvimento de dApps. Desenvolvimento de protótipos em 48h.",
+                contact_title: "Entre em Contato",
+                contact_subtitle: "Preencha o formulário abaixo para iniciar uma conversa.",
+                form_name: "Nome",
+                form_email: "Email",
+                form_message: "Mensagem",
+                form_submit: "ENVIAR MENSAGEM",
+                form_success: "[SUCCESS] Mensagem enviada com sucesso.",
+                form_processing: "PROCESSANDO..."
+            },
+            en: {
+                header_title: "PLINIO MABESI | DEV PORTFOLIO",
+                nav_contact: "CONTACT",
+                menu_home: "HOME",
+                menu_skills: "SKILLS",
+                menu_education: "EDUCATION",
+                menu_projects: "PROJECTS",
+                menu_events: "EVENTS",
+                menu_contact: "CONTACT",
+                status_active: "[STATUS: OPEN TO WORK]",
+                role_title: "Blockchain & Web3 Full-Stack Developer",
+                about_text_1: "Blockchain & Web3 Full-Stack Developer in career transition, focused on smart contracts, decentralized applications, and secure system design.",
+                about_text_2: "I build smart contracts, dApps, APIs, and user interfaces using Solidity, Hardhat, Node.js, React, and AI-assisted workflows.",
+                btn_view_projects: "VIEW PROJECTS",
+                skills_title: "Technical Skills",
+                skill_blockchain: "Blockchain & Smart Contracts",
+                skill_web3: "Web3 Development",
+                skill_fullstack: "Full-Stack JavaScript",
+                education_title: "Academic Background",
+                edu_1_course: "Specialization in Web Development",
+                edu_1_desc: "Focus on modern web technologies, software architecture, and engineering best practices.",
+                edu_2_course: "Technologist in IT Management",
+                edu_2_desc: "Management of information systems, business processes, and IT infrastructure.",
+                edu_3_course: "Bachelor in Information Systems",
+                edu_3_desc: "Fundamentals of computer science, systems development, and administration.",
+                projects_title: "Main Projects",
+                proj_cerberus_desc: "Educational SaaS platform for DEX operation automation. Web2 + Web3, secure authentication, and market monitoring.",
+                proj_mysplit_desc: "Shared expense splitting app. Real-time logic, authentication, and complete database structure.",
+                proj_cadrimil_desc: "App for calculating travel allowances for military personnel. Simulation based on rank, location, and period.",
+                proj_geana_desc: "Electronic Signal Analysis System. Interfaces for filtering, analyzing, and reporting radar data.",
+                proj_rdsim_desc: "Radio Control Panel & Data Link Simulator. Interactive components for operational training.",
+                events_title: "Events Participation",
+                event_1_desc: "Participation in the main Ethereum event in Latin America, focused on innovation and Web3.",
+                event_2_desc: "Networking with developers and workshops on new DeFi and NFT trends.",
+                event_3_desc: "Global dApp development competition. Prototype development in 48h.",
+                contact_title: "Get in Touch",
+                contact_subtitle: "Fill out the form below to start a conversation.",
+                form_name: "Name",
+                form_email: "Email",
+                form_message: "Message",
+                form_submit: "SEND MESSAGE",
+                form_success: "[SUCCESS] Message sent successfully.",
+                form_processing: "PROCESSING..."
+            }
+        };
+
+        let currentLang = 'pt';
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            // Persist preference (optional)
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // Load saved language or default to PT
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'pt';
+            changeLanguage(savedLang);
+        });
+
+        // --- FORM HANDLING ---
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const submitButton = document.getElementById('submit-button');
             const formMessage = document.getElementById('form-message');
+            const processingText = translations[currentLang].form_processing;
+            const successText = translations[currentLang].form_success;
 
             submitButton.disabled = true;
-            submitButton.innerHTML = '<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> PROCESSANDO TRANSMISSÃO...';
+            submitButton.innerHTML = `<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> ${processingText}`;
             lucide.createIcons(); 
 
-            // Simula o processamento do envio
             setTimeout(() => {
                 submitButton.disabled = false;
-                submitButton.innerHTML = '<i data-lucide="send-check" class="w-6 h-6"></i> <span>ENVIAR MENSAGEM</span>';
+                submitButton.innerHTML = `<i data-lucide="send" class="w-6 h-6"></i> <span>${translations[currentLang].form_submit}</span>`;
                 lucide.createIcons(); 
                 
                 const txID = 'MSG-' + Math.random().toString(36).substring(2, 6).toUpperCase();
 
-                // Simulação de sucesso
                 formMessage.classList.remove('hidden');
-                formMessage.textContent = `[SUCCESS] Mensagem enviada com sucesso. ID: ${txID}.`;
+                formMessage.textContent = `${successText} ID: ${txID}.`;
                 
-                // Limpa o formulário após o envio
                 document.getElementById('contact-form').reset();
 
-                // Esconde a mensagem após 7 segundos
                 setTimeout(() => {
                     formMessage.classList.add('hidden');
                 }, 7000);
 
-            }, 2000); // 2 segundos para simular a transmissão
+            }, 2000);
         });
 
-        // 2. Configurações de Rolagem Suave (Scroll)
+        // --- SCROLL & NAV ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                // Usa offset para contabilizar a altura do header fixo
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
                 const headerHeight = document.querySelector('header').offsetHeight;
 
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - headerHeight - 10, // 10px de padding extra
+                        top: targetElement.offsetTop - headerHeight - 10,
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-
-        // 3. Lógica do Menu Flutuante (Highlight da seção ativa)
         const sections = document.querySelectorAll('.dashboard-section');
         const navLinks = document.querySelectorAll('#floating-menu a');
 
@@ -549,7 +751,6 @@
             const headerHeight = document.querySelector('header').offsetHeight;
 
             sections.forEach(section => {
-                // Ponto de detecção: 50 pixels abaixo do topo da seção
                 const sectionTop = section.offsetTop - headerHeight - 50; 
                 const sectionBottom = sectionTop + section.offsetHeight;
 
@@ -567,7 +768,6 @@
         }
 
         window.addEventListener('scroll', updateFloatingMenu);
-        // Garante que o estado inicial do menu esteja correto ao carregar a página
         updateFloatingMenu(); 
     </script>
 </body>
