@@ -52,11 +52,9 @@ Alongside my Web3 path, I have solid experience developing complete software sys
 
 <div align="center">
   
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=mabesi&theme=radical&hide_border=true&background=0D1117)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=mabesi&theme=radical&hide_border=true&background=0D1117)](https://git.io/streak-stats)
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mabesi&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&include_all_commits=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mabesi&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&langs_count=8)
+[![Plinio's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=mabesi&theme=react-dark&hide_border=true&bg_color=0D1117&color=84CC16&line=FBBF24&point=84CC16)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
 
