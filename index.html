@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +50,8 @@
         /* Estilos Globais */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000; /* Deep Black */
+            background-color: #000000;
+            /* Deep Black */
             color: #F3F4F6;
             line-height: 1.6;
             overflow-x: hidden;
@@ -61,7 +63,7 @@
             padding: 8rem 1rem 4rem 1rem;
             position: relative;
         }
-        
+
         /* Contêiner de Conteúdo Central */
         .content-container {
             max-width: 1200px;
@@ -71,20 +73,25 @@
 
         /* Card Principal/Componente */
         .data-card {
-            background-color: #0F0F0F; /* Card Dark */
-            border: 1px solid rgba(132, 204, 22, 0.2); /* Lime border sutil */
+            background-color: #0F0F0F;
+            /* Card Dark */
+            border: 1px solid rgba(132, 204, 22, 0.2);
+            /* Lime border sutil */
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .data-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(132, 204, 22, 0.5); /* Lime hover glow */
+            box-shadow: 0 6px 20px rgba(132, 204, 22, 0.5);
+            /* Lime hover glow */
         }
 
         /* Destaque para Icones e Texto Principal */
         .accent-icon {
-            color: #FBBF24; /* Amber */
+            color: #FBBF24;
+            /* Amber */
         }
 
         /* Linha de separação */
@@ -96,7 +103,7 @@
             opacity: 0.3;
             margin: 4rem 0;
         }
-        
+
         /* Estilo do Menu Flutuante */
         .floating-menu-item {
             display: flex;
@@ -112,15 +119,19 @@
             text-decoration: none;
         }
 
-        .floating-menu-item:hover, .floating-menu-item.active {
+        .floating-menu-item:hover,
+        .floating-menu-item.active {
             background-color: #0F0F0F;
             color: #84CC16;
             transform: translateX(-5px);
             border-left: 3px solid #FBBF24;
         }
+
         .floating-menu-item span {
-            font-size: 0.875rem; /* text-sm */
-            font-weight: 600; /* semi-bold */
+            font-size: 0.875rem;
+            /* text-sm */
+            font-weight: 600;
+            /* semi-bold */
             margin-left: 8px;
             transition: color 0.3s;
         }
@@ -133,10 +144,12 @@
         }
     </style>
 </head>
+
 <body class="bg-bg-deep-black text-text-light">
 
     <!-- CABEÇALHO/NAVEGAÇÃO FIXA -->
-    <header class="fixed top-0 left-0 right-0 bg-bg-deep-black/95 backdrop-blur-sm border-b border-accent-lime/30 z-50 p-4 shadow-custom">
+    <header
+        class="fixed top-0 left-0 right-0 bg-bg-deep-black/95 backdrop-blur-sm border-b border-accent-lime/30 z-50 p-4 shadow-custom">
         <nav class="content-container mx-auto flex justify-between items-center px-4">
             <h1 class="text-xl font-extrabold text-accent-lime flex items-center space-x-2 animate-pulse-slow">
                 <i data-lucide="terminal" class="w-6 h-6"></i>
@@ -145,14 +158,16 @@
             <div class="flex items-center space-x-4">
                 <!-- Language Switcher -->
                 <div class="flex space-x-2">
-                    <button onclick="changeLanguage('pt')" class="hover:opacity-80 transition-opacity" title="Português">
+                    <button onclick="changeLanguage('pt')" class="hover:opacity-80 transition-opacity"
+                        title="Português">
                         <span class="text-2xl">🇧🇷</span>
                     </button>
                     <button onclick="changeLanguage('en')" class="hover:opacity-80 transition-opacity" title="English">
                         <span class="text-2xl">🇺🇸</span>
                     </button>
                 </div>
-                <a href="#contact-module" class="px-3 py-1 text-sm font-medium bg-accent-yellow/10 text-accent-yellow rounded-lg hover:bg-accent-yellow/30 transition duration-200 flex items-center space-x-1">
+                <a href="#contact-module"
+                    class="px-3 py-1 text-sm font-medium bg-accent-yellow/10 text-accent-yellow rounded-lg hover:bg-accent-yellow/30 transition duration-200 flex items-center space-x-1">
                     <i data-lucide="corner-down-right" class="w-4 h-4"></i>
                     <span data-i18n="nav_contact">CONTATO</span>
                 </a>
@@ -161,7 +176,8 @@
     </header>
 
     <!-- FLOATING NAVIGATION MENU (Lateral Direita) -->
-    <nav id="floating-menu" class="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block bg-bg-deep-black/70 backdrop-blur-sm p-2 rounded-l-xl border-y border-l border-accent-lime/30 shadow-custom">
+    <nav id="floating-menu"
+        class="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block bg-bg-deep-black/70 backdrop-blur-sm p-2 rounded-l-xl border-y border-l border-accent-lime/30 shadow-custom">
         <a href="#intro-module" class="floating-menu-item group" data-section="intro-module">
             <i data-lucide="user" class="w-5 h-5 group-hover:text-accent-yellow"></i>
             <span data-i18n="menu_home">INÍCIO</span>
@@ -169,6 +185,10 @@
         <a href="#skills-module" class="floating-menu-item group" data-section="skills-module">
             <i data-lucide="cpu" class="w-5 h-5 group-hover:text-accent-yellow"></i>
             <span data-i18n="menu_skills">SKILLS</span>
+        </a>
+        <a href="#experience-module" class="floating-menu-item group" data-section="experience-module">
+            <i data-lucide="briefcase" class="w-5 h-5 group-hover:text-accent-yellow"></i>
+            <span data-i18n="menu_experience">EXPERIÊNCIA</span>
         </a>
         <a href="#education-module" class="floating-menu-item group" data-section="education-module">
             <i data-lucide="graduation-cap" class="w-5 h-5 group-hover:text-accent-yellow"></i>
@@ -183,65 +203,78 @@
             <span data-i18n="menu_events">EVENTOS</span>
         </a>
         <a href="#contact-module" class="floating-menu-item group" data-section="contact-module">
-            <i data-lucide="send" class="w-5 h-5 group-hover:text-accent-yellow"></i>
+            <i data-lucide="mail" class="w-5 h-5 group-hover:text-accent-yellow"></i>
             <span data-i18n="menu_contact">CONTATO</span>
         </a>
     </nav>
 
-
     <!-- 1. INTRODUÇÃO (DISPLAY INTEGRADO E FOTO) -->
     <section id="intro-module" class="dashboard-section flex items-center justify-center pt-40">
-        <div class="content-container">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-                
-                <!-- Coluna da Foto (4/12 na Lg) -->
-                <div class="lg:col-span-4 flex justify-center lg:justify-start mb-8 lg:mb-0">
-                    <div class="relative w-64 h-80 bg-bg-card-dark p-3 border-4 border-accent-yellow/50 rounded-2xl shadow-lime-glow overflow-hidden rotate-1">
-                        <!-- Imagem: Foto Pessoal -->
-                        <img src="img/profile_img.png" 
-                             alt="Plinio Mabesi" 
-                             class="w-full h-full object-cover rounded-xl opacity-90 transition duration-500 hover:scale-[1.02] hover:opacity-100" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/256x320/0F0F0F/A3A3A3?text=FOTO';">
-                        <div class="absolute inset-0 border-4 border-accent-lime/50 rounded-2xl pointer-events-none transition duration-500 hover:border-accent-yellow"></div>
+        <div class="content-container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Coluna da Foto (Esquerda) -->
+            <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+                <div class="relative">
+                    <!-- Glow Effect -->
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-r from-accent-lime to-accent-yellow opacity-30 blur-2xl rounded-full animate-pulse-slow">
                     </div>
+                    <!-- Foto -->
+                    <img src="img/profile_img.png" alt="Plinio Mabesi"
+                        class="relative w-80 h-[30rem] object-cover rounded-3xl border-2 border-accent-lime/50 shadow-2xl grayscale hover:grayscale-0 transition duration-500"
+                        onerror="this.onerror=null; this.src='https://placehold.co/320x480/0F0F0F/A3A3A3?text=FOTO';" />
+                </div>
+            </div>
+
+            <!-- Coluna de Informações (Direita) -->
+            <div class="text-left space-y-6 order-2 lg:order-1">
+                <div class="inline-block px-3 py-1 rounded-full bg-accent-lime/10 border border-accent-lime/30 text-accent-lime text-xs font-bold tracking-wider mb-2"
+                    data-i18n="status_active">
+                    [STATUS: DISPONÍVEL]
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-text-light leading-tight">
+                    PLINIO <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-accent-lime to-accent-yellow">MABESI</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-text-muted font-light" data-i18n="role_title">
+                    Blockchain & Web3 Full-Stack Developer
+                </h2>
+                <p class="text-lg text-text-muted max-w-xl leading-relaxed border-l-4 border-accent-yellow pl-4"
+                    data-i18n="about_text_1">
+                    Desenvolvedor Full-Stack Blockchain & Web3 em transição de carreira, focado em contratos
+                    inteligentes,
+                    aplicações descentralizadas e design de sistemas seguros.
+                </p>
+                <p class="text-base text-text-muted max-w-xl" data-i18n="about_text_2">
+                    Construo smart contracts, dApps, APIs e interfaces de usuário usando Solidity, Hardhat, Node.js,
+                    React e
+                    fluxos de trabalho assistidos por IA.
+                </p>
+
+                <!-- Social Links -->
+                <div class="flex space-x-4 pt-4">
+                    <a href="https://github.com/mabesi" target="_blank"
+                        class="p-3 bg-bg-card-dark rounded-full border border-accent-lime/20 hover:border-accent-lime hover:text-accent-lime transition transform hover:scale-110">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/pliniomabesi" target="_blank"
+                        class="p-3 bg-bg-card-dark rounded-full border border-accent-lime/20 hover:border-accent-lime hover:text-accent-lime transition transform hover:scale-110">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://x.com/pliniomabesi" target="_blank"
+                        class="p-3 bg-bg-card-dark rounded-full border border-accent-lime/20 hover:border-accent-lime hover:text-accent-lime transition transform hover:scale-110">
+                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://instagram.com/pliniomabesi" target="_blank"
+                        class="p-3 bg-bg-card-dark rounded-full border border-accent-lime/20 hover:border-accent-lime hover:text-accent-lime transition transform hover:scale-110">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
                 </div>
 
-                <!-- Coluna do Texto (8/12 na Lg) -->
-                <div class="lg:col-span-8 lg:text-left text-center">
-                    <span class="text-sm font-semibold uppercase tracking-widest text-accent-yellow animate-pulse-slow mb-4 block" data-i18n="status_active">
-                        [STATUS: OPEN TO WORK]
-                    </span>
-                    <h2 class="text-5xl md:text-7xl font-black text-text-light mb-4 leading-tight">
-                        Plinio Mabesi
-                    </h2>
-                    <h1 class="text-2xl md:text-3xl font-light text-accent-lime mb-8" data-i18n="role_title">
-                        Blockchain & Web3 Full-Stack Developer
-                    </h1>
-                    
-                    <p class="text-lg text-text-muted mb-6 max-w-3xl lg:max-w-none" data-i18n="about_text_1">
-                        Desenvolvedor Full-Stack Blockchain & Web3 em transição de carreira, focado em contratos inteligentes, aplicações descentralizadas e design de sistemas seguros.
-                    </p>
-                    <p class="text-lg text-text-muted mb-10 max-w-3xl lg:max-w-none" data-i18n="about_text_2">
-                        Construo smart contracts, dApps, APIs e interfaces de usuário usando Solidity, Hardhat, Node.js, React e fluxos de trabalho assistidos por IA.
-                    </p>
-                    
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-                        <a href="https://linkedin.com/in/pliniomabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
-                            <img src="img/linkedin.png" alt="LinkedIn" class="w-6 h-6">
-                        </a>
-                        <a href="https://github.com/mabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
-                            <img src="img/github.png" alt="GitHub" class="w-6 h-6">
-                        </a>
-                        <a href="https://x.com/pliniomabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
-                            <img src="img/x.png" alt="X / Twitter" class="w-6 h-6">
-                        </a>
-                        <a href="https://instagram.com/pliniomabesi" target="_blank" class="p-2 bg-bg-card-dark border border-accent-lime/30 rounded-lg hover:bg-accent-lime/20 transition">
-                            <img src="img/instagram.png" alt="Instagram" class="w-6 h-6">
-                        </a>
-                    </div>
-
-                    <a href="#projects-module" class="px-8 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-full hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 flex items-center justify-center lg:justify-start space-x-2 w-max text-lg mx-auto lg:mx-0">
-                        <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                <div class="pt-6">
+                    <a href="#projects-module"
+                        class="inline-flex items-center px-8 py-4 bg-accent-lime text-bg-deep-black font-bold rounded-lg hover:bg-accent-lime/90 transition shadow-lg shadow-accent-lime/20">
+                        <i data-lucide="code" class="w-5 h-5 mr-2"></i>
                         <span data-i18n="btn_view_projects">VER PROJETOS</span>
                     </a>
                 </div>
@@ -250,265 +283,426 @@
     </section>
 
     <!-- SEPARADOR -->
-    <div class="content-container mx-auto px-4"><div class="divider"></div></div>
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
+    </div>
 
-    <!-- 2. COMPETÊNCIAS -->
+    <!-- 2. SKILLS (PAINEL TÉCNICO) -->
     <section id="skills-module" class="dashboard-section pt-0">
         <div class="content-container">
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="skills_title">
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4"
+                data-i18n="skills_title">
                 Competências Técnicas
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Blockchain -->
-                <div class="data-card p-6">
-                    <p class="text-2xl font-extrabold text-accent-lime mb-4 flex items-center space-x-3">
-                        <i data-lucide="blocks" class="w-7 h-7 text-accent-yellow"></i>
-                        <span data-i18n="skill_blockchain">Blockchain & Smart Contracts</span>
-                    </p>
-                    <div class="space-y-3 text-text-light text-base pl-0">
-                        <div class="flex items-center space-x-3">
-                            <img src="img/solidity.png" alt="Solidity" class="w-6 h-6 object-contain">
-                            <p>Solidity, Ethers.js</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Blockchain -->
+                <div class="data-card p-6 hover:border-accent-lime/50 transition duration-300">
+                    <div class="flex items-center mb-4 space-x-3">
+                        <div class="p-2 bg-accent-lime/10 rounded-lg">
+                            <i data-lucide="blocks" class="w-8 h-8 text-accent-lime"></i>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <img src="img/hardhat.png" alt="Hardhat" class="w-6 h-6 object-contain">
-                            <p>Hardhat, OpenZeppelin</p>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i data-lucide="link" class="w-6 h-6 text-accent-lime"></i>
-                            <p>Gas Optimization, Testing</p>
-                        </div>
+                        <h3 class="text-xl font-bold text-text-light" data-i18n="skill_blockchain">Blockchain & Smart
+                            Contracts</h3>
                     </div>
+                    <ul class="space-y-2 text-text-muted">
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Solidity, Ethers.js</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Hardhat, OpenZeppelin</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Gas Optimization</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Testing & Security</li>
+                    </ul>
                 </div>
 
-                <!-- Web3 Dev -->
-                <div class="data-card p-6">
-                    <p class="text-2xl font-extrabold text-accent-lime mb-4 flex items-center space-x-3">
-                        <i data-lucide="wallet" class="w-7 h-7 text-accent-yellow"></i>
-                        <span data-i18n="skill_web3">Web3 Development</span>
-                    </p>
-                    <div class="space-y-3 text-text-light text-base pl-0">
-                        <div class="flex items-center space-x-3">
-                            <i data-lucide="app-window" class="w-6 h-6 text-accent-lime"></i>
-                            <p>dApps, Wallet Integration</p>
+                <!-- Card 2: Web3 -->
+                <div class="data-card p-6 hover:border-accent-lime/50 transition duration-300">
+                    <div class="flex items-center mb-4 space-x-3">
+                        <div class="p-2 bg-accent-lime/10 rounded-lg">
+                            <i data-lucide="globe" class="w-8 h-8 text-accent-lime"></i>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <i data-lucide="activity" class="w-6 h-6 text-accent-lime"></i>
-                            <p>Event Listeners</p>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i data-lucide="coins" class="w-6 h-6 text-accent-lime"></i>
-                            <p>Token/NFT Mechanics</p>
-                        </div>
+                        <h3 class="text-xl font-bold text-text-light" data-i18n="skill_web3">Web3 Development</h3>
                     </div>
+                    <ul class="space-y-2 text-text-muted">
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> dApps & Wallet Integration</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Event Listeners</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Token Standards (ERC20/721)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> IPFS / Decentralized Storage</li>
+                    </ul>
                 </div>
 
-                <!-- Full Stack -->
-                <div class="data-card p-6">
-                    <p class="text-2xl font-extrabold text-accent-lime mb-4 flex items-center space-x-3">
-                        <i data-lucide="layers" class="w-7 h-7 text-accent-yellow"></i>
-                        <span data-i18n="skill_fullstack">Full-Stack JavaScript</span>
-                    </p>
-                    <div class="space-y-3 text-text-light text-base pl-0">
-                        <div class="flex items-center space-x-3">
-                            <img src="img/react.png" alt="React" class="w-6 h-6 object-contain">
-                            <p>React, React Native (Expo)</p>
+                <!-- Card 3: Full Stack -->
+                <div class="data-card p-6 hover:border-accent-lime/50 transition duration-300">
+                    <div class="flex items-center mb-4 space-x-3">
+                        <div class="p-2 bg-accent-lime/10 rounded-lg">
+                            <i data-lucide="layers" class="w-8 h-8 text-accent-lime"></i>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <img src="img/node.png" alt="Node" class="w-6 h-6 object-contain">
-                            <p>Node.js, Firebase</p>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <img src="img/ts.png" alt="TypeScript" class="w-6 h-6 object-contain">
-                            <p>TypeScript, REST APIs</p>
-                        </div>
+                        <h3 class="text-xl font-bold text-text-light" data-i18n="skill_fullstack">Full-Stack JavaScript
+                        </h3>
                     </div>
+                    <ul class="space-y-2 text-text-muted">
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> React, Next.js, React Native</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Node.js, Express</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> TypeScript, REST APIs</li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-accent-yellow mr-2"></i> Firebase, SQL/NoSQL</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SEPARADOR -->
-    <div class="content-container mx-auto px-4"><div class="divider"></div></div>
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
+    </div>
 
-    <!-- 3. FORMAÇÃO (NOVA SEÇÃO) -->
+    <!-- 3. EXPERIENCE (NOVA SEÇÃO) -->
+    <section id="experience-module" class="dashboard-section pt-0">
+        <div class="content-container">
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4"
+                data-i18n="exp_title">
+                Experiência Profissional
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Exp 1 -->
+                <div class="data-card p-8 border-l-4 border-l-accent-lime">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-light" data-i18n="exp_1_role">Blockchain / Web3
+                                Full-Stack Developer</h3>
+                            <p class="text-accent-lime font-semibold" data-i18n="exp_1_company">Self-Employed</p>
+                        </div>
+                        <span
+                            class="text-sm text-text-muted bg-bg-deep-black px-3 py-1 rounded-full border border-accent-lime/20 mt-2 md:mt-0">Nov
+                            2025 - Present</span>
+                    </div>
+                    <p class="text-text-muted" data-i18n="exp_1_desc">
+                        Desenvolvimento independente de projetos blockchain pessoais e didáticos. Foco em contratos
+                        inteligentes Solidity, testes com Hardhat e desenvolvimento full-stack de dApps usando React e
+                        Next.js.
+                    </p>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="data-card p-8 border-l-4 border-l-accent-lime">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-light" data-i18n="exp_2_role">Especialista em
+                                Comunicações de Dados</h3>
+                            <p class="text-accent-lime font-semibold" data-i18n="exp_2_company">Força Aérea Brasileira -
+                                FAB</p>
+                        </div>
+                        <span
+                            class="text-sm text-text-muted bg-bg-deep-black px-3 py-1 rounded-full border border-accent-lime/20 mt-2 md:mt-0">Jan
+                            2019 - Nov 2025</span>
+                    </div>
+                    <p class="text-text-muted" data-i18n="exp_2_desc">
+                        Operador de rádio e sistemas de comunicação de voz e dados aeroembarcados. Transmissão de dados
+                        e sistemas de telecomunicações.
+                    </p>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="data-card p-8 border-l-4 border-l-accent-lime">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-light" data-i18n="exp_3_role">Administrador de Rede
+                            </h3>
+                            <p class="text-accent-lime font-semibold" data-i18n="exp_3_company">Força Aérea Brasileira -
+                                FAB</p>
+                        </div>
+                        <span
+                            class="text-sm text-text-muted bg-bg-deep-black px-3 py-1 rounded-full border border-accent-lime/20 mt-2 md:mt-0">Jan
+                            2009 - 2018</span>
+                    </div>
+                    <p class="text-text-muted" data-i18n="exp_3_desc">
+                        Administração de rede, servidores Linux Debian virtualizados e suporte a estações de trabalho.
+                        Manutenção de sistemas PHP/MySQL.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
+    </div>
+
+    <!-- 4. EDUCATION (FORMAÇÃO) -->
     <section id="education-module" class="dashboard-section pt-0">
         <div class="content-container">
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="education_title">
-                Formação Acadêmica
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4"
+                data-i18n="education_title">
+                Formação Acadêmica & Certificações
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
+
+            <!-- Academic -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Edu 1 -->
                 <div class="data-card p-6 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                        <i data-lucide="graduation-cap" class="w-24 h-24 text-accent-lime"></i>
+                    <div
+                        class="absolute top-0 right-0 w-16 h-16 bg-accent-lime/10 rounded-bl-full -mr-8 -mt-8 transition-all group-hover:bg-accent-lime/20">
                     </div>
-                    <p class="text-sm text-accent-yellow font-bold mb-2">2017 - 2018</p>
+                    <span class="text-xs font-bold text-accent-yellow mb-2 block">2017 - 2018</span>
                     <h3 class="text-xl font-bold text-text-light mb-1">PUC Minas</h3>
-                    <p class="text-accent-lime font-medium mb-4" data-i18n="edu_1_course">Especialização em Desenvolvimento Web</p>
-                    <p class="text-text-muted text-sm" data-i18n="edu_1_desc">Foco em tecnologias web modernas, arquitetura de software e melhores práticas de engenharia.</p>
+                    <p class="text-accent-lime text-sm font-semibold mb-3" data-i18n="edu_1_course">Especialização em
+                        Desenvolvimento Web</p>
+                    <p class="text-text-muted text-sm" data-i18n="edu_1_desc">Foco em tecnologias web modernas,
+                        arquitetura de software e melhores práticas de engenharia.</p>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Edu 2 -->
                 <div class="data-card p-6 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                        <i data-lucide="book-open" class="w-24 h-24 text-accent-lime"></i>
+                    <div
+                        class="absolute top-0 right-0 w-16 h-16 bg-accent-lime/10 rounded-bl-full -mr-8 -mt-8 transition-all group-hover:bg-accent-lime/20">
                     </div>
-                    <p class="text-sm text-accent-yellow font-bold mb-2">2009 - 2011</p>
+                    <span class="text-xs font-bold text-accent-yellow mb-2 block">2009 - 2011</span>
                     <h3 class="text-xl font-bold text-text-light mb-1">Universidade Paulista</h3>
-                    <p class="text-accent-lime font-medium mb-4" data-i18n="edu_2_course">Tecnólogo em Gestão de TI</p>
-                    <p class="text-text-muted text-sm" data-i18n="edu_2_desc">Gestão de sistemas de informação, processos de negócios e infraestrutura de TI.</p>
+                    <p class="text-accent-lime text-sm font-semibold mb-3" data-i18n="edu_2_course">Tecnólogo em Gestão
+                        de TI</p>
+                    <p class="text-text-muted text-sm" data-i18n="edu_2_desc">Gestão de sistemas de informação,
+                        processos de negócios e infraestrutura de TI.</p>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Edu 3 -->
                 <div class="data-card p-6 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                        <i data-lucide="award" class="w-24 h-24 text-accent-lime"></i>
+                    <div
+                        class="absolute top-0 right-0 w-16 h-16 bg-accent-lime/10 rounded-bl-full -mr-8 -mt-8 transition-all group-hover:bg-accent-lime/20">
                     </div>
-                    <p class="text-sm text-accent-yellow font-bold mb-2">2003 - 2006</p>
+                    <span class="text-xs font-bold text-accent-yellow mb-2 block">2003 - 2006</span>
                     <h3 class="text-xl font-bold text-text-light mb-1">UFPA</h3>
-                    <p class="text-accent-lime font-medium mb-4" data-i18n="edu_3_course">Bacharelado em Sistemas de Informação</p>
-                    <p class="text-text-muted text-sm" data-i18n="edu_3_desc">Fundamentos de ciência da computação, desenvolvimento de sistemas e administração.</p>
+                    <p class="text-accent-lime text-sm font-semibold mb-3" data-i18n="edu_3_course">Bacharelado em
+                        Sistemas de Informação</p>
+                    <p class="text-text-muted text-sm" data-i18n="edu_3_desc">Fundamentos de ciência da computação,
+                        desenvolvimento de sistemas e administração.</p>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <h3 class="text-2xl font-bold text-text-light mb-6 flex items-center" data-i18n="cert_title">
+                <i data-lucide="award" class="w-6 h-6 text-accent-yellow mr-2"></i> Certificações
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="data-card p-4 flex items-center space-x-4">
+                    <div class="p-2 bg-accent-lime/10 rounded-full"><i data-lucide="shield-check"
+                            class="w-6 h-6 text-accent-lime"></i></div>
+                    <div>
+                        <p class="font-bold text-text-light">Certified Kubernetes Admin</p>
+                        <p class="text-xs text-text-muted">Linux Foundation</p>
+                    </div>
+                </div>
+                <div class="data-card p-4 flex items-center space-x-4">
+                    <div class="p-2 bg-accent-lime/10 rounded-full"><i data-lucide="cloud"
+                            class="w-6 h-6 text-accent-lime"></i></div>
+                    <div>
+                        <p class="font-bold text-text-light">AWS Solutions Architect</p>
+                        <p class="text-xs text-text-muted">Amazon Web Services</p>
+                    </div>
+                </div>
+                <div class="data-card p-4 flex items-center space-x-4">
+                    <div class="p-2 bg-accent-lime/10 rounded-full"><i data-lucide="lock"
+                            class="w-6 h-6 text-accent-lime"></i></div>
+                    <div>
+                        <p class="font-bold text-text-light">Certified Ethical Hacker</p>
+                        <p class="text-xs text-text-muted">EC-Council</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SEPARADOR -->
-    <div class="content-container mx-auto px-4"><div class="divider"></div></div>
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
+    </div>
 
-    <!-- 4. PROJETOS -->
+    <!-- 5. PROJETOS (GRID) -->
     <section id="projects-module" class="dashboard-section pt-0">
         <div class="content-container">
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="projects_title">
-                Principais Projetos
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4"
+                data-i18n="projects_title">
+                Projetos em Destaque
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Cerberus -->
-                <div class="data-card p-6 flex flex-col">
-                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
-                        <i data-lucide="bot" class="w-16 h-16 text-accent-lime opacity-80"></i>
+
+                <!-- Projeto 1: Cerberus -->
+                <div class="data-card group overflow-hidden">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden">
+                        <img src="img/proj1.png" alt="Cerberus"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/0F0F0F/A3A3A3?text=CERBERUS';" />
+                        <div
+                            class="absolute top-2 right-2 bg-accent-lime text-bg-deep-black text-xs font-bold px-2 py-1 rounded">
+                            DEX TRADER</div>
                     </div>
-                    <h3 class="text-xl font-bold text-text-light mb-2">Cerberus</h3>
-                    <p class="text-accent-yellow text-xs font-bold mb-3">DEX TRADER BOT</p>
-                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_cerberus_desc">
-                        Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3, autenticação segura e monitoramento de mercado.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Solidity</span>
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Hardhat</span>
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Next.js</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-text-light mb-2">Cerberus</h3>
+                        <p class="text-text-muted text-sm mb-4 h-20 overflow-hidden" data-i18n="proj_cerberus_desc">
+                            Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3, autenticação
+                            segura e monitoramento de mercado.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/mabesi/cerberus" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="github"
+                                    class="w-5 h-5"></i></a>
+                            <a href="https://apps.mabesi.dev/cerberus" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="external-link"
+                                    class="w-5 h-5"></i></a>
+                        </div>
                     </div>
-                    <a href="https://apps.mabesi.dev/cerberus" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
-                    </a>
                 </div>
 
-                <!-- MySplit -->
-                <div class="data-card p-6 flex flex-col">
-                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
-                        <i data-lucide="smartphone" class="w-16 h-16 text-accent-lime opacity-80"></i>
+                <!-- Projeto 2: MySplit -->
+                <div class="data-card group overflow-hidden">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden">
+                        <img src="img/proj2.png" alt="MySplit"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/0F0F0F/A3A3A3?text=MYSPLIT';" />
+                        <div
+                            class="absolute top-2 right-2 bg-accent-yellow text-bg-deep-black text-xs font-bold px-2 py-1 rounded">
+                            MOBILE APP</div>
                     </div>
-                    <h3 class="text-xl font-bold text-text-light mb-2">MySplit</h3>
-                    <p class="text-accent-yellow text-xs font-bold mb-3">MOBILE APP</p>
-                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_mysplit_desc">
-                        App de divisão de despesas compartilhadas. Lógica de tempo real, autenticação e estrutura de banco de dados completa.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">React Native</span>
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Expo</span>
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Firebase</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-text-light mb-2">MySplit</h3>
+                        <p class="text-text-muted text-sm mb-4 h-20 overflow-hidden" data-i18n="proj_mysplit_desc">
+                            App de divisão de despesas compartilhadas. Lógica de tempo real, autenticação e estrutura de
+                            banco de dados completa.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/mabesi/mysplit" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="github"
+                                    class="w-5 h-5"></i></a>
+                            <a href="https://apps.mabesi.dev/mysplit" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="external-link"
+                                    class="w-5 h-5"></i></a>
+                        </div>
                     </div>
-                    <a href="https://apps.mabesi.dev/mysplit" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
-                    </a>
                 </div>
 
-                <!-- Cadrimil -->
-                <div class="data-card p-6 flex flex-col">
-                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
-                        <i data-lucide="calculator" class="w-16 h-16 text-accent-lime opacity-80"></i>
+                <!-- Projeto 3: Cadrimil -->
+                <div class="data-card group overflow-hidden">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden">
+                        <img src="img/proj3.png" alt="Cadrimil"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/0F0F0F/A3A3A3?text=CADRIMIL';" />
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            UTILITY</div>
                     </div>
-                    <h3 class="text-xl font-bold text-text-light mb-2">Cadrimil</h3>
-                    <p class="text-accent-yellow text-xs font-bold mb-3">UTILITY APP</p>
-                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_cadrimil_desc">
-                        App para cálculo de diárias de viagens para militares. Simulação de valores baseada em posto, localidade e período.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">React Native</span>
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">AsyncStorage</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-text-light mb-2">Cadrimil</h3>
+                        <p class="text-text-muted text-sm mb-4 h-20 overflow-hidden" data-i18n="proj_cadrimil_desc">
+                            App para cálculo de diárias de viagens para militares. Simulação de valores baseada em
+                            posto, localidade e período.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/mabesi/cadrimil" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="github"
+                                    class="w-5 h-5"></i></a>
+                            <a href="https://apps.mabesi.dev/cadrimil" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="external-link"
+                                    class="w-5 h-5"></i></a>
+                        </div>
                     </div>
-                    <a href="https://apps.mabesi.dev/cadrimil" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
-                    </a>
                 </div>
 
-                <!-- GEANA -->
-                <div class="data-card p-6 flex flex-col">
-                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
-                        <i data-lucide="bar-chart-2" class="w-16 h-16 text-accent-lime opacity-80"></i>
+                <!-- Projeto 4: GEANA -->
+                <div class="data-card group overflow-hidden">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden">
+                        <img src="img/proj4.png" alt="GEANA"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/0F0F0F/A3A3A3?text=GEANA';" />
+                        <div
+                            class="absolute top-2 right-2 bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            DATA VIS</div>
                     </div>
-                    <h3 class="text-xl font-bold text-text-light mb-2">GEANA</h3>
-                    <p class="text-accent-yellow text-xs font-bold mb-3">DATA VISUALIZATION</p>
-                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_geana_desc">
-                        Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e relatório de dados de radar.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">JavaScript</span>
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Data Viz</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-text-light mb-2">GEANA</h3>
+                        <p class="text-text-muted text-sm mb-4 h-20 overflow-hidden" data-i18n="proj_geana_desc">
+                            Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e relatório de
+                            dados de radar.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://apps.mabesi.dev/geana" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="external-link"
+                                    class="w-5 h-5"></i></a>
+                        </div>
                     </div>
-                    <a href="https://apps.mabesi.dev/geana" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
-                    </a>
                 </div>
 
-                <!-- RDSIM -->
-                <div class="data-card p-6 flex flex-col">
-                    <div class="mb-4 h-40 bg-black/50 rounded-lg flex items-center justify-center border border-accent-lime/20">
-                        <i data-lucide="radio" class="w-16 h-16 text-accent-lime opacity-80"></i>
+                <!-- Projeto 5: RDSIM -->
+                <div class="data-card group overflow-hidden">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden">
+                        <img src="img/proj5.png" alt="RDSIM"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/0F0F0F/A3A3A3?text=RDSIM';" />
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            SIMULATION</div>
                     </div>
-                    <h3 class="text-xl font-bold text-text-light mb-2">RDSIM</h3>
-                    <p class="text-accent-yellow text-xs font-bold mb-3">SIMULATION</p>
-                    <p class="text-text-muted text-sm mb-4 flex-grow" data-i18n="proj_rdsim_desc">
-                        Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos para treinamento operacional.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">JavaScript</span>
-                        <span class="text-xs bg-accent-lime/10 text-accent-lime px-2 py-1 rounded">Simulation</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-text-light mb-2">RDSIM</h3>
+                        <p class="text-text-muted text-sm mb-4 h-20 overflow-hidden" data-i18n="proj_rdsim_desc">
+                            Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos para
+                            treinamento operacional.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://apps.mabesi.dev/rdsim" target="_blank"
+                                class="text-accent-lime hover:text-white transition"><i data-lucide="external-link"
+                                    class="w-5 h-5"></i></a>
+                        </div>
                     </div>
-                    <a href="https://apps.mabesi.dev/rdsim" target="_blank" class="text-accent-lime text-sm font-bold flex items-center hover:underline">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> DEMO
-                    </a>
                 </div>
+
+                <!-- Projeto 6: VIEW ALL -->
+                <a href="https://apps.mabesi.dev" target="_blank"
+                    class="data-card group overflow-hidden flex flex-col items-center justify-center p-6 border-2 border-dashed border-accent-lime/30 hover:border-accent-lime hover:bg-accent-lime/10 transition cursor-pointer">
+                    <div class="p-4 bg-accent-lime/20 rounded-full mb-4 group-hover:scale-110 transition">
+                        <i data-lucide="layout-grid" class="w-10 h-10 text-accent-lime"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-lime mb-2" data-i18n="proj_view_all">VER TODOS OS PROJETOS
+                    </h3>
+                    <p class="text-text-muted text-sm text-center">Acesse o portfólio completo em apps.mabesi.dev</p>
+                </a>
 
             </div>
         </div>
     </section>
 
     <!-- SEPARADOR -->
-    <div class="content-container mx-auto px-4"><div class="divider"></div></div>
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
+    </div>
 
-    <!-- 5. EVENTOS (NOVA SEÇÃO - PLACEHOLDERS) -->
+    <!-- 6. EVENTOS -->
     <section id="events-module" class="dashboard-section pt-0">
         <div class="content-container">
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4" data-i18n="events_title">
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4"
+                data-i18n="events_title">
                 Participação em Eventos
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
+
                 <!-- Evento 1 -->
                 <div class="data-card p-6 flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-accent-lime/10 rounded-full flex items-center justify-center mb-4">
                         <i data-lucide="calendar-check" class="w-8 h-8 text-accent-lime"></i>
                     </div>
                     <h3 class="text-lg font-bold text-text-light mb-2">Ethereum Rio 2024</h3>
-                    <p class="text-text-muted text-sm mb-4" data-i18n="event_1_desc">Participação no principal evento de Ethereum da América Latina, focado em inovação e Web3.</p>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_1_desc">Participação no principal
+                        evento de Ethereum da América Latina, focado em inovação e Web3.</p>
                     <span class="text-xs text-accent-yellow font-bold">Rio de Janeiro, BR</span>
                 </div>
 
@@ -518,7 +712,8 @@
                         <i data-lucide="users" class="w-8 h-8 text-accent-lime"></i>
                     </div>
                     <h3 class="text-lg font-bold text-text-light mb-2">Blockchain Festival</h3>
-                    <p class="text-text-muted text-sm mb-4" data-i18n="event_2_desc">Networking com desenvolvedores e workshops sobre as novas tendências de DeFi e NFTs.</p>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_2_desc">Networking com
+                        desenvolvedores e workshops sobre as novas tendências de DeFi e NFTs.</p>
                     <span class="text-xs text-accent-yellow font-bold">São Paulo, BR</span>
                 </div>
 
@@ -528,7 +723,8 @@
                         <i data-lucide="code" class="w-8 h-8 text-accent-lime"></i>
                     </div>
                     <h3 class="text-lg font-bold text-text-light mb-2">Hackathon Web3 Global</h3>
-                    <p class="text-text-muted text-sm mb-4" data-i18n="event_3_desc">Competição global de desenvolvimento de dApps. Desenvolvimento de protótipos em 48h.</p>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_3_desc">Competição global de
+                        desenvolvimento de dApps. Desenvolvimento de protótipos em 48h.</p>
                     <span class="text-xs text-accent-yellow font-bold">Online</span>
                 </div>
 
@@ -537,52 +733,61 @@
     </section>
 
     <!-- SEPARADOR -->
-    <div class="content-container mx-auto px-4"><div class="divider"></div></div>
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
+    </div>
 
-    <!-- 6. CONTATO -->
+    <!-- 7. CONTATO -->
     <section id="contact-module" class="dashboard-section min-h-screen flex flex-col justify-center items-center pt-0">
         <div class="content-container w-full max-w-2xl p-8 md:p-10 data-card text-center">
-            
-            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-8 flex items-center justify-center space-x-3">
+
+            <h2
+                class="text-3xl md:text-4xl font-bold text-accent-yellow mb-8 flex items-center justify-center space-x-3">
                 <i data-lucide="mail" class="w-8 h-8 text-accent-lime"></i>
                 <span data-i18n="contact_title">Entre em Contato</span>
             </h2>
-            
+
             <p class="text-text-muted mb-8" data-i18n="contact_subtitle">
                 Preencha o formulário abaixo para iniciar uma conversa.
             </p>
 
             <form id="contact-form" class="space-y-4 text-left">
                 <div>
-                    <label for="c_name" class="block text-sm font-medium text-text-muted mb-1" data-i18n="form_name">Nome</label>
+                    <label for="c_name" class="block text-sm font-medium text-text-muted mb-1"
+                        data-i18n="form_name">Nome</label>
                     <input type="text" id="c_name" name="name" required
-                           class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
+                        class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
                 </div>
                 <div>
-                    <label for="c_email" class="block text-sm font-medium text-text-muted mb-1" data-i18n="form_email">Email</label>
+                    <label for="c_email" class="block text-sm font-medium text-text-muted mb-1"
+                        data-i18n="form_email">Email</label>
                     <input type="email" id="c_email" name="email" required
-                           class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
+                        class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
                 </div>
                 <div>
-                    <label for="c_message" class="block text-sm font-medium text-text-muted mb-1" data-i18n="form_message">Mensagem</label>
+                    <label for="c_message" class="block text-sm font-medium text-text-muted mb-1"
+                        data-i18n="form_message">Mensagem</label>
                     <textarea id="c_message" name="message" rows="5" required
-                              class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg"></textarea>
+                        class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg"></textarea>
                 </div>
-                <button type="submit" id="submit-button" class="px-6 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-lg hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 w-full flex items-center justify-center space-x-2 text-lg mt-6">
+                <button type="submit" id="submit-button"
+                    class="px-6 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-lg hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 w-full flex items-center justify-center space-x-2 text-lg mt-6">
                     <i data-lucide="send" class="w-6 h-6"></i>
                     <span data-i18n="form_submit">ENVIAR MENSAGEM</span>
                 </button>
             </form>
 
-            <div id="form-message" class="mt-8 p-4 text-center font-bold text-base bg-accent-yellow/20 text-accent-yellow border border-accent-yellow hidden rounded-lg"></div>
+            <div id="form-message"
+                class="mt-8 p-4 text-center font-bold text-base bg-accent-yellow/20 text-accent-yellow border border-accent-yellow hidden rounded-lg">
+            </div>
         </div>
     </section>
-    
+
     <!-- Script JavaScript -->
     <script>
         // Inicializa os ícones Lucide
         lucide.createIcons();
-        
+
         // --- MULTILINGUAL SUPPORT ---
         const translations = {
             pt: {
@@ -590,6 +795,7 @@
                 nav_contact: "CONTATO",
                 menu_home: "INÍCIO",
                 menu_skills: "SKILLS",
+                menu_experience: "EXPERIÊNCIA",
                 menu_education: "FORMAÇÃO",
                 menu_projects: "PROJETOS",
                 menu_events: "EVENTOS",
@@ -603,19 +809,31 @@
                 skill_blockchain: "Blockchain & Smart Contracts",
                 skill_web3: "Desenvolvimento Web3",
                 skill_fullstack: "Full-Stack JavaScript",
-                education_title: "Formação Acadêmica",
+                exp_title: "Experiência Profissional",
+                exp_1_role: "Blockchain / Web3 Full-Stack Developer",
+                exp_1_company: "Self-Employed",
+                exp_1_desc: "Desenvolvimento independente de projetos blockchain pessoais e didáticos. Foco em contratos inteligentes Solidity, testes com Hardhat e desenvolvimento full-stack de dApps usando React e Next.js.",
+                exp_2_role: "Especialista em Comunicações de Dados",
+                exp_2_company: "Força Aérea Brasileira - FAB",
+                exp_2_desc: "Operador de rádio e sistemas de comunicação de voz e dados aeroembarcados. Transmissão de dados e sistemas de telecomunicações.",
+                exp_3_role: "Administrador de Rede",
+                exp_3_company: "Força Aérea Brasileira - FAB",
+                exp_3_desc: "Administração de rede, servidores Linux Debian virtualizados e suporte a estações de trabalho. Manutenção de sistemas PHP/MySQL.",
+                education_title: "Formação Acadêmica & Certificações",
                 edu_1_course: "Especialização em Desenvolvimento Web",
                 edu_1_desc: "Foco em tecnologias web modernas, arquitetura de software e melhores práticas de engenharia.",
                 edu_2_course: "Tecnólogo em Gestão de TI",
                 edu_2_desc: "Gestão de sistemas de informação, processos de negócios e infraestrutura de TI.",
                 edu_3_course: "Bacharelado em Sistemas de Informação",
                 edu_3_desc: "Fundamentos de ciência da computação, desenvolvimento de sistemas e administração.",
-                projects_title: "Principais Projetos",
+                cert_title: "Certificações",
+                projects_title: "Projetos em Destaque",
                 proj_cerberus_desc: "Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3, autenticação segura e monitoramento de mercado.",
                 proj_mysplit_desc: "App de divisão de despesas compartilhadas. Lógica de tempo real, autenticação e estrutura de banco de dados completa.",
                 proj_cadrimil_desc: "App para cálculo de diárias de viagens para militares. Simulação de valores baseada em posto, localidade e período.",
                 proj_geana_desc: "Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e relatório de dados de radar.",
                 proj_rdsim_desc: "Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos para treinamento operacional.",
+                proj_view_all: "VER TODOS OS PROJETOS",
                 events_title: "Participação em Eventos",
                 event_1_desc: "Participação no principal evento de Ethereum da América Latina, focado em inovação e Web3.",
                 event_2_desc: "Networking com desenvolvedores e workshops sobre as novas tendências de DeFi e NFTs.",
@@ -634,6 +852,7 @@
                 nav_contact: "CONTACT",
                 menu_home: "HOME",
                 menu_skills: "SKILLS",
+                menu_experience: "EXPERIENCE",
                 menu_education: "EDUCATION",
                 menu_projects: "PROJECTS",
                 menu_events: "EVENTS",
@@ -647,19 +866,31 @@
                 skill_blockchain: "Blockchain & Smart Contracts",
                 skill_web3: "Web3 Development",
                 skill_fullstack: "Full-Stack JavaScript",
-                education_title: "Academic Background",
+                exp_title: "Professional Experience",
+                exp_1_role: "Blockchain / Web3 Full-Stack Developer",
+                exp_1_company: "Self-Employed",
+                exp_1_desc: "Independent development of personal and didactic blockchain projects. Focus on Solidity smart contracts, Hardhat testing, and full-stack dApp development using React and Next.js.",
+                exp_2_role: "Data Communications Specialist",
+                exp_2_company: "Brazilian Air Force - FAB",
+                exp_2_desc: "Radio operator and airborne voice and data communication systems. Data transmission and telecommunications systems.",
+                exp_3_role: "Network Administrator",
+                exp_3_company: "Brazilian Air Force - FAB",
+                exp_3_desc: "Network administration, virtualized Debian Linux servers, and workstation support. Maintenance of PHP/MySQL systems.",
+                education_title: "Academic Background & Certifications",
                 edu_1_course: "Specialization in Web Development",
                 edu_1_desc: "Focus on modern web technologies, software architecture, and engineering best practices.",
                 edu_2_course: "Technologist in IT Management",
                 edu_2_desc: "Management of information systems, business processes, and IT infrastructure.",
                 edu_3_course: "Bachelor in Information Systems",
                 edu_3_desc: "Fundamentals of computer science, systems development, and administration.",
-                projects_title: "Main Projects",
+                cert_title: "Certifications",
+                projects_title: "Featured Projects",
                 proj_cerberus_desc: "Educational SaaS platform for DEX operation automation. Web2 + Web3, secure authentication, and market monitoring.",
                 proj_mysplit_desc: "Shared expense splitting app. Real-time logic, authentication, and complete database structure.",
                 proj_cadrimil_desc: "App for calculating travel allowances for military personnel. Simulation based on rank, location, and period.",
                 proj_geana_desc: "Electronic Signal Analysis System. Interfaces for filtering, analyzing, and reporting radar data.",
                 proj_rdsim_desc: "Radio Control Panel & Data Link Simulator. Interactive components for operational training.",
+                proj_view_all: "VIEW ALL PROJECTS",
                 events_title: "Events Participation",
                 event_1_desc: "Participation in the main Ethereum event in Latin America, focused on innovation and Web3.",
                 event_2_desc: "Networking with developers and workshops on new DeFi and NFT trends.",
@@ -696,7 +927,7 @@
         });
 
         // --- FORM HANDLING ---
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const submitButton = document.getElementById('submit-button');
             const formMessage = document.getElementById('form-message');
@@ -705,18 +936,18 @@
 
             submitButton.disabled = true;
             submitButton.innerHTML = `<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> ${processingText}`;
-            lucide.createIcons(); 
+            lucide.createIcons();
 
             setTimeout(() => {
                 submitButton.disabled = false;
                 submitButton.innerHTML = `<i data-lucide="send" class="w-6 h-6"></i> <span>${translations[currentLang].form_submit}</span>`;
-                lucide.createIcons(); 
-                
+                lucide.createIcons();
+
                 const txID = 'MSG-' + Math.random().toString(36).substring(2, 6).toUpperCase();
 
                 formMessage.classList.remove('hidden');
                 formMessage.textContent = `${successText} ID: ${txID}.`;
-                
+
                 document.getElementById('contact-form').reset();
 
                 setTimeout(() => {
@@ -751,7 +982,7 @@
             const headerHeight = document.querySelector('header').offsetHeight;
 
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - headerHeight - 50; 
+                const sectionTop = section.offsetTop - headerHeight - 50;
                 const sectionBottom = sectionTop + section.offsetHeight;
 
                 if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
@@ -771,4 +1002,5 @@
         updateFloatingMenu(); 
     </script>
 </body>
+
 </html>

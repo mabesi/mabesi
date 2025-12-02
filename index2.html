@@ -36,12 +36,13 @@
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
+      /* Alinha itens à direita */
       gap: 1rem;
       z-index: 99;
     }
 
-    nav a,
-    nav button {
+    nav a {
       backdrop-filter: blur(10px);
       background: var(--glass);
       padding: 0.8rem 1rem;
@@ -57,10 +58,35 @@
       align-items: center;
     }
 
-    nav a:hover,
-    nav button:hover {
+    nav a:hover {
       background: var(--accent2);
       transform: scale(1.05);
+    }
+
+    /* Container das Bandeiras */
+    .lang-switcher {
+      display: flex;
+      flex-direction: row;
+      /* Lado a lado */
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .lang-switcher button {
+      background: var(--glass);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-size: 1.8rem;
+      /* Maior */
+      padding: 0.5rem;
+      transition: 0.3s;
+      backdrop-filter: blur(10px);
+    }
+
+    .lang-switcher button:hover {
+      transform: scale(1.1);
+      background: var(--accent);
     }
 
     /* ===== HEADER NOVO LAYOUT ===== */
@@ -73,37 +99,7 @@
       gap: 2rem;
     }
 
-    header img {
-      width: 190px;
-      border-radius: 50%;
-      filter: drop-shadow(var(--shadow));
-    }
-
-    .header-info h1 {
-      margin: 0;
-      font-size: 2.1rem;
-    }
-
-    .header-info p {
-      color: var(--accent);
-      font-size: 1.2rem;
-      margin-top: 0.3rem;
-    }
-
-    .social {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .social img {
-      width: 34px;
-      transition: 0.2s;
-    }
-
-    .social img:hover {
-      transform: scale(1.1);
-    }
+    /* ... (outros estilos mantidos) ... */
 
     /* ===== SEÇÕES ===== */
     section {
@@ -120,26 +116,44 @@
       padding-left: 1rem;
     }
 
-    /* ===== STACK ===== */
-    .stack-grid {
+    /* ===== SKILLS (Refatorado) ===== */
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
 
-    .stack-card {
+    .skill-group {
       background: var(--glass);
       backdrop-filter: blur(14px);
-      padding: 1rem;
+      padding: 1.5rem;
       border-radius: var(--radius);
-      text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--shadow2);
+      box-shadow: var(--shadow);
     }
 
-    .stack-card img {
-      width: 60px;
-      margin-bottom: 0.6rem;
+    .skill-group h3 {
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .skill-item img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
     }
 
     /* ===== PROJETOS & GERAL CARDS ===== */
@@ -277,7 +291,8 @@
     }
 
     .hero-photo {
-      width: 400px;
+      width: 450px;
+      /* AUMENTADO */
       border-radius: 50%;
       filter: drop-shadow(0 0 34px rgba(59, 199, 255, 0.55));
     }
@@ -306,7 +321,7 @@
       }
 
       .hero-photo {
-        width: 260px;
+        width: 300px;
       }
 
       .hero-info h1 {
@@ -319,12 +334,18 @@
         right: 50%;
         transform: translateX(50%);
         flex-direction: row;
+        align-items: center;
         width: 90%;
         justify-content: center;
       }
 
       nav a span {
         display: none;
+      }
+
+      .lang-switcher {
+        margin-bottom: 0;
+        margin-right: 1rem;
       }
     }
   </style>
@@ -333,10 +354,13 @@
 <body>
 
   <nav>
-    <button onclick="changeLanguage('pt')">🇧🇷</button>
-    <button onclick="changeLanguage('en')">🇺🇸</button>
+    <div class="lang-switcher">
+      <button onclick="changeLanguage('pt')">🇧🇷</button>
+      <button onclick="changeLanguage('en')">🇺🇸</button>
+    </div>
     <a href="#sobre"><span data-i18n="menu_home">Sobre</span></a>
-    <a href="#stack"><span data-i18n="menu_skills">Stack</span></a>
+    <a href="#skills"><span data-i18n="menu_skills">Skills</span></a>
+    <a href="#experience"><span data-i18n="menu_experience">Experiência</span></a>
     <a href="#education"><span data-i18n="menu_education">Formação</span></a>
     <a href="#projetos"><span data-i18n="menu_projects">Projetos</span></a>
     <a href="#eventos"><span data-i18n="menu_events">Eventos</span></a>
@@ -347,7 +371,7 @@
     <div class="hero-bg"></div>
     <div class="hero-wrapper">
       <img src="img/profile_img.png" alt="Foto" class="hero-photo"
-        onerror="this.onerror=null; this.src='https://placehold.co/400x400/0F0F0F/A3A3A3?text=FOTO';" />
+        onerror="this.onerror=null; this.src='https://placehold.co/450x450/0F0F0F/A3A3A3?text=FOTO';" />
       <div class="hero-info">
         <h1>Plínio Mabesi</h1>
         <p data-i18n="role_title">Blockchain & Web3 Full-Stack Developer</p>
@@ -356,7 +380,7 @@
           <a href="https://linkedin.com/in/pliniomabesi" target="_blank"><img src="img/linkedin.png" /></a>
           <a href="https://x.com/pliniomabesi" target="_blank"><img src="img/x.png" /></a>
           <a href="https://instagram.com/pliniomabesi" target="_blank"><img src="img/instagram.png" /></a>
-          <a href="mailto:contato@mabesi.dev"><img src="img/mail.png" /></a>
+          <!-- Email icon removed -->
         </div>
       </div>
     </div>
@@ -377,45 +401,70 @@
     </p>
   </section>
 
-  <section id="stack">
-    <h2 data-i18n="skills_title">Principais Competências</h2>
-    <div class="stack-grid">
-      <div class="stack-card"><img src="img/solidity.png">
-        <p>Solidity</p>
-      </div>
-      <div class="stack-card"><img src="img/hardhat.png">
-        <p>Hardhat</p>
-      </div>
-      <div class="stack-card"><img src="img/react.png">
-        <p>React / Next</p>
-      </div>
-      <div class="stack-card"><img src="img/node.png">
-        <p>Node / Express</p>
-      </div>
-      <div class="stack-card"><img src="img/ts.png">
-        <p>TypeScript</p>
+  <section id="skills">
+    <h2 data-i18n="skills_title">Competências Técnicas</h2>
+    <div class="skills-grid">
+
+      <!-- Blockchain -->
+      <div class="skill-group">
+        <h3 data-i18n="skill_blockchain">Blockchain & Smart Contracts</h3>
+        <div class="skill-item"><img src="img/solidity.png"> Solidity, Ethers.js</div>
+        <div class="skill-item"><img src="img/hardhat.png"> Hardhat, OpenZeppelin</div>
+        <div class="skill-item">Gas Optimization, Testing</div>
       </div>
 
-      <div class="stack-card"><img src="img/python.png">
-        <p>Python</p>
+      <!-- Web3 -->
+      <div class="skill-group">
+        <h3 data-i18n="skill_web3">Web3 Development</h3>
+        <div class="skill-item">dApps, Wallet Integration</div>
+        <div class="skill-item">Event Listeners</div>
+        <div class="skill-item">Token/NFT Mechanics</div>
       </div>
-      <div class="stack-card"><img src="img/php.png">
-        <p>PHP</p>
+
+      <!-- Full Stack -->
+      <div class="skill-group">
+        <h3 data-i18n="skill_fullstack">Full-Stack JavaScript</h3>
+        <div class="skill-item"><img src="img/react.png"> React, React Native (Expo)</div>
+        <div class="skill-item"><img src="img/node.png"> Node.js, Firebase</div>
+        <div class="skill-item"><img src="img/ts.png"> TypeScript, REST APIs</div>
       </div>
-      <div class="stack-card"><img src="img/laravel.png">
-        <p>Laravel</p>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 data-i18n="exp_title">Experiência Profissional</h2>
+    <div class="grid-container" style="grid-template-columns: 1fr;">
+      <!-- Exp 1 -->
+      <div class="card" style="border-left: 4px solid var(--accent);">
+        <div class="meta">Nov 2025 - Present</div>
+        <h3 data-i18n="exp_1_role">Blockchain / Web3 Full-Stack Developer</h3>
+        <p style="color: var(--accent2); font-weight: bold;" data-i18n="exp_1_company">Self-Employed</p>
+        <p data-i18n="exp_1_desc">Desenvolvimento independente de projetos blockchain pessoais e didáticos. Foco em
+          contratos inteligentes Solidity, testes com Hardhat e desenvolvimento full-stack de dApps usando React e
+          Next.js.</p>
       </div>
-      <div class="stack-card"><img src="img/mysql.png">
-        <p>MySQL</p>
+      <!-- Exp 2 -->
+      <div class="card" style="border-left: 4px solid var(--accent);">
+        <div class="meta">Jan 2019 - Nov 2025</div>
+        <h3 data-i18n="exp_2_role">Especialista em Comunicações de Dados</h3>
+        <p style="color: var(--accent2); font-weight: bold;" data-i18n="exp_2_company">Força Aérea Brasileira - FAB</p>
+        <p data-i18n="exp_2_desc">Operador de rádio e sistemas de comunicação de voz e dados aeroembarcados.
+          Transmissão de dados e sistemas de telecomunicações.</p>
       </div>
-      <div class="stack-card"><img src="img/mongo-db.png">
-        <p>Mongodb</p>
+      <!-- Exp 3 -->
+      <div class="card" style="border-left: 4px solid var(--accent);">
+        <div class="meta">Jan 2009 - 2018</div>
+        <h3 data-i18n="exp_3_role">Administrador de Rede</h3>
+        <p style="color: var(--accent2); font-weight: bold;" data-i18n="exp_3_company">Força Aérea Brasileira - FAB</p>
+        <p data-i18n="exp_3_desc">Administração de rede, servidores Linux Debian virtualizados e suporte a estações de
+          trabalho. Manutenção de sistemas PHP/MySQL.</p>
       </div>
     </div>
   </section>
 
   <section id="education">
-    <h2 data-i18n="education_title">Formação Acadêmica</h2>
+    <h2 data-i18n="education_title">Formação Acadêmica & Certificações</h2>
     <div class="grid-container">
       <!-- Card 1 -->
       <div class="card">
@@ -440,6 +489,28 @@
         <p data-i18n="edu_3_course">Bacharelado em Sistemas de Informação</p>
         <p style="font-size: 0.85rem; opacity: 0.7;" data-i18n="edu_3_desc">Fundamentos de ciência da computação,
           desenvolvimento de sistemas e administração.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 2rem; color: var(--accent); font-size: 1.4rem;" data-i18n="cert_title">Certificações</h3>
+    <div class="grid-container">
+      <div class="card" style="padding: 1rem; flex-direction: row; align-items: center; gap: 1rem;">
+        <div>
+          <p style="font-weight: bold; margin: 0;">Certified Kubernetes Administrator</p>
+          <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">Linux Foundation</p>
+        </div>
+      </div>
+      <div class="card" style="padding: 1rem; flex-direction: row; align-items: center; gap: 1rem;">
+        <div>
+          <p style="font-weight: bold; margin: 0;">AWS Certified Solutions Architect</p>
+          <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">Amazon Web Services</p>
+        </div>
+      </div>
+      <div class="card" style="padding: 1rem; flex-direction: row; align-items: center; gap: 1rem;">
+        <div>
+          <p style="font-weight: bold; margin: 0;">Certified Ethical Hacker</p>
+          <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">EC-Council</p>
+        </div>
       </div>
     </div>
   </section>
@@ -508,6 +579,15 @@
           <a href="https://apps.mabesi.dev/rdsim" target="_blank"><img src="img/link.png" style="width:30px;" /></a>
         </div>
       </div>
+
+      <!-- VER TODOS -->
+      <a href="https://apps.mabesi.dev" target="_blank" class="card"
+        style="text-decoration: none; align-items: center; justify-content: center; background: rgba(59,199,255,0.05); border: 1px solid var(--accent);">
+        <img src="img/projects.png" style="width: 60px; opacity: 0.8; margin-bottom: 1rem;">
+        <h3 style="color: var(--accent); margin: 0;" data-i18n="proj_view_all">VER TODOS OS PROJETOS</h3>
+        <p style="text-align: center; font-size: 0.8rem; margin-top: 0.5rem; color: var(--text);">Acesse o portfólio
+          completo em apps.mabesi.dev</p>
+      </a>
 
     </div>
   </section>

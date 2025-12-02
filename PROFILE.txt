@@ -1,0 +1,120 @@
+HEADER:
+Plinio Mabesi 
+Blockchain & Web3 Full-Stack Developer | Smart Contracts (Solidity) | dApps | JavaScript/React | System Design | Career Transition | Enthusiast of the blockchain and crypto
+Self-Employed in the Blockchain Space.
+Anápolis, Goiás, Brasil
+
+ABOUT:
+
+I am a Blockchain & Web3 Full-Stack Developer, in career transition, focused on smart contracts, decentralized applications, and secure system design. My experience in Web3 is built through intensive hands-on study, personal projects, and end-to-end development of practical prototypes — even though I haven’t yet worked professionally in the blockchain industry.
+Alongside my Web3 path, I have solid experience developing complete software systems in JavaScript/TypeScript, React, React Native, and data-driven interfaces for corporate environments. This combination allows me to approach blockchain development with strong fundamentals in architecture, usability, and problem-solving.
+I build smart contracts, dApps, APIs, and user interfaces using Solidity, Hardhat, Node.js, React, and AI-assisted workflows. My approach is analytical, security-oriented, and focused on delivering clean, scalable, and well-structured solutions.
+
+Competencies
+
+Blockchain & Smart Contracts (Didactic & Personal Projects): Solidity, Ethers.js, Hardhat, OpenZeppelin, contract patterns, gas-efficient logic, testing, on-chain/off-chain flows.
+Web3 Development: dApps, wallet integration, event listeners, transaction design, token/NFT mechanics.
+Full-Stack JavaScript​: React, React Native (Expo), Node.js, Firebase, REST APIs.
+System Design: structured architecture, data processing, simulation systems, UI/UX for complex workflows.
+AI-Enhanced Development: Gemini, ChatGPT, Claude for prototyping, refactoring and documentation.
+
+
+MAIN PROJECTS:
+
+
+Cerberus
+https://apps.mabesi.dev/cerberus | https://github.com/mabesi/cerberus
+Solidity, Hardhat, OpenZeppelin, React, Next.js, WebSockets, Node.js, JWT, Jest
+
+A decentralized exchange crypto trader bot project. A Didactic Web3 Automation Platform for DEX Operations.
+Cerberus is an educational, multi-tenant SaaS designed to demonstrate practical Web3 automation for decentralized exchange operations. It blends Web2 and Web3 technologies to deliver secure authentication flows, crypto-based billing, hybrid security, and continuous market monitoring, enabling fully automated swap execution on DEX platforms.
+The system is structured into four core modules: an engine that tracks market data via WebSocket, a Web2+Web3 backend built with Hardhat and OpenZeppelin, a React/Next.js frontend for user interaction, and a blockchain layer containing the smart contracts that execute DEX operations. The platform includes JWT-based authentication and automated testing with Jest and Hardhat to ensure reliability and robustness.
+
+GEANA
+https://apps.mabesi.dev/geana
+JavaScript · Data Visualization
+
+Electronic Signal Analysis System (Internal Corporate Project)
+Developed interfaces and tools for filtering, analyzing, and reporting radar signal data collected by airborne systems.
+
+RDSIM
+https://apps.mabesi.dev/rdsim
+JavaScript · Simulation Systems
+
+Radio Control Panel & Data Link Simulator (Internal Corporate Project)
+Built interactive UI components and logic for a training simulator focused on radio operations and Data Link procedures.
+
+MySplit
+https://apps.mabesi.dev/mysplit | https://github.com/mabesi/mysplit
+React Native · Expo · Firebase
+
+Shared Expense Split Mobile App – Personal Project (Developing)
+Designed and implemented a complete expense-sharing app with authentication, database structure, and real-time logic.
+
+Cadrimil
+https://apps.mabesi.dev/cadrimil | https://github.com/mabesi/cadrimil
+React Native • Expo • Async Storage • JSON API
+
+An application to assist military personnel in calculating travel allowances.
+Cadrimil is a mobile application developed with React Native and Expo to assist military personnel in calculating travel allowances. The application allows users to simulate amounts to be received based on rank/grade, location, and mission period, in addition to providing quick access to rate tables and current legislation.
+
+
+MAIN SKILLS:
+
+React.js • Next.js • Solidity • Hardhat • Ethereum
+
+EXPERIENCE:
+
+Blockchain / Web3 Full-Stack Developer (Open to Opportunities)
+Self-Employed in the Blockchain Space. · AutônomoSelf-Employed in the Blockchain Space. · Autônomo
+nov de 2025 - o momento · 2 meses
+Anápolis, Goiás, Brasil · RemotaAnápolis, Goiás, Brasil · Remota
+I work independently developing personal and didactic blockchain projects while transitioning into a full-time Web3 development career. My focus is on Solidity smart contracts, Hardhat testing and automation, and full-stack dApp development using React, Next.js, Express, and EVM-compatible chains.
+I build prototypes and complete small projects involving tokens, NFTs, automated trading logic, decentralized governance models, and Web2 + Web3 system integrations. Open to roles where I can apply my technical foundation, contribute to real-world products, and continue developing as a Web3 full-stack engineer.
+
+Especialista em comunicações de dados
+Força Aérea Brasileira - FAB · Tempo integralForça Aérea Brasileira - FAB · Tempo integral
+jan de 2019 - nov de 2025 · 6 anos 11 meses
+Anápolis, Goiás, Brasil · PresencialAnápolis, Goiás, Brasil · Presencial
+Operador de rádio e sistemas de comunicação de voz e dados aeroembarcados.Operador de rádio e sistemas de comunicação de voz e dados aeroembarcados.
+Transmissão de dados, Sistemas de telecomunicações e mais 3 competências
+
+Administrador de Rede
+Força Aérea Brasileira - FABForça Aérea Brasileira - FAB
+jan de 2009 - 2018 · 9 anos 1 mês
+Anápolis e Região, Brasil · PresencialAnápolis e Região, Brasil · Presencial
+Administração de rede, servidores Linux Debian virtualizados com Xen e gerenciamento de usuários com Expresso Livre. Suporte a estações de trabalho Windows/Linux em domínio Samba. Manutenção de página e outros sistemas PHP/MySQL.
+
+
+ACADEMIC BACKGROUND:
+
+PUC Minas
+Especialização, Desenvolvimento de Aplicações WebEspecialização, Desenvolvimento de Aplicações Web
+2017 - 20182017 - 2018
+O curso de especialização em Desenvolvimento de Aplicações Web busca capacitar os alunos para o domínio das tecnologias web, em especial aquelas relacionadas ao desenvolvimento de aplicações, bem como para a adoção de melhores práticas em Engenharia de Software para a Web.
+O curso tem o objetivo de capacitar os alunos para o uso das tecnologias e das metodologias de desenvolvimento de aplicações web, para que possam atender as mais diversas necessidades das empresas e outras organizações.
+O curso de especialização em Desenvolvimento de Aplicações Web busca capacitar os alunos para o domínio das tecnologias web, em especial aquelas relacionadas ao desenvolvimento de aplicações, bem como para a adoção de melhores práticas em Engenharia de Software para a Web. O curso tem o objetivo de capacitar os alunos para o uso das tecnologias e das metodologias de desenvolvimento de aplicações web, para que possam atender as mais diversas necessidades das empresas e outras organizações.
+Competências: Laravel · Angular · React.js · Ionic Framework · JavaScript · Next.js · Express.js · Frameworks PHP · jQuery UI · Node.js · npm (Gerenciador de Pacotes do Node) · TypeScript
+
+Instituto Consciência GO
+Técnico, Transações ImobiliáriasTécnico, Transações Imobiliárias
+2014 - 20152014 - 2015
+O curso visa formar profissionais aptos a atuar no competitivo mercado imobiliário, com habilidades para planejar, organizar, dirigir e controlar as atividades ligadas ao segmento. Além de ser um especialista na área, esteja apto a desenvolver uma base humanista para ampliar suas perspectivas, detectando ameaças e oportunidades do mercado imobiliário.
+
+Universidade Paulista
+Tecnólogo, Gestão de TITecnólogo, Gestão de TI
+2009 - 20112009 - 2011
+O Curso Superior de Tecnologia em Gestão da Tecnologia da Informação da UNIP tem como objetivo capacitar o aluno a definir o sistema de informação a ser utilizado na gestão dos negócios de uma empresa, seja ela da área do comércio, indústria ou de serviços, pública ou privada, sempre buscando ótimo desempenho do custo-benefício. O profissional recebe conhecimentos que permitirão identificar quais informações são necessárias nos processos de gestão de uma empresa, bem como nos de atualização das tecnologias de informática existentes no mercado.
+
+Universidade Federal do Pará
+Bacharelado, Sistemas de InformaçãoBacharelado, Sistemas de Informação
+2003 - 20062003 - 2006
+O curso de Bacharelado em Sistemas de Informação deve propiciar formação sólida em Ciência da Computação, básica em Administração de Empresas e abrangente em Sistemas de Informação, enfatizando aspectos teóricos e práticos, visando a formação de profissionais para a atuação em desenvolvimento tecnológico em Informática, com ênfase em desenvolvimento de sistemas de informação em organizações, com o uso de modernas tecnologias de informação.
+O curso de Bacharelado em Sistemas de Informação deve propiciar formação sólida em Ciência da Computação, básica em Administração de Empresas e abrangente em Sistemas de Informação, enfatizando aspectos teóricos e práticos, visando a formação de profissionais para a atuação em desenvolvimento tecnológico em Informática, com ênfase em desenvolvimento de sistemas de informação em organizações, com o uso de modernas tecnologias de informação.
+
+Escola de Especialistas de Aeronáutica
+Ensino Técnico, Comunicações AeronáuticasEnsino Técnico, Comunicações Aeronáuticas
+jan de 1997 - jun de 1998jan de 1997 - jun de 1998
+Formação profissional como técnico especialista em operação de comunicações aeronáuticas, englobando sistemas de comunicação de voz e dados, computação, eletricidade e eletrônica básica, navegação aérea e instrumentos de voo.
+Formação profissional como técnico especialista em operação de comunicações aeronáuticas, englobando sistemas de comunicação de voz e dados, computação, eletricidade e eletrônica básica, navegação aérea e instrumentos de voo.
+Competências: Operador de Rádio · Navegação Aérea · Sistemas de telecomunicações · Informática Básica · Eletrônica Básica
