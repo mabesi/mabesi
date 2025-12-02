@@ -62,9 +62,9 @@ Alongside my Web3 path, I have solid experience developing complete software sys
 
 ## 🏆 Featured Projects
 
-### [Cerberus Analytics](https://github.com/mabesi/cerberus)
+### [Cerberus Dex Bot](https://github.com/mabesi/cerberus)
 
-**Educational SaaS for DEX Automation**
+**Educational SaaS Bot for DEX Automation**
 - **Stack**: Solidity, Hardhat, React, Next.js, WebSockets.
 - **Description**: A multi-tenant SaaS designed to demonstrate practical Web3 automation. Features secure authentication, crypto-based billing, and continuous market monitoring for automated swap execution.
 
