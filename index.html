@@ -586,41 +586,90 @@
         </div>
     </section>
 
-    <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-8 flex items-center justify-center space-x-3">
-        <i data-lucide="mail" class="w-8 h-8 text-accent-lime"></i>
-        <span data-i18n="contact_title">Entre em Contato</span>
-    </h2>
-    <p class="text-text-muted mb-8" data-i18n="contact_subtitle">Preencha o formulário abaixo para iniciar uma
-        conversa.</p>
-    <form action="https://formspree.io/f/xjknrpak" method="POST" class="space-y-4 text-left">
-        <div>
-            <label for="c_name" class="block text-sm font-medium text-text-muted mb-1"
-                data-i18n="form_name">Nome</label>
-            <input type="text" id="c_name" name="name" required
-                class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
-        </div>
-        <div>
-            <label for="c_email" class="block text-sm font-medium text-text-muted mb-1"
-                data-i18n="form_email">Email</label>
-            <input type="email" id="c_email" name="email" required
-                class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
-        </div>
-        <div>
-            <label for="c_message" class="block text-sm font-medium text-text-muted mb-1"
-                data-i18n="form_message">Mensagem</label>
-            <textarea id="c_message" name="message" rows="5" required
-                class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg"></textarea>
-        </div>
-        <button type="submit" id="submit-button"
-            class="px-6 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-lg hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 w-full flex items-center justify-center space-x-2 text-lg mt-6">
-            <i data-lucide="send" class="w-6 h-6"></i>
-            <span data-i18n="form_submit">ENVIAR MENSAGEM</span>
-        </button>
-    </form>
-    <div id="form-message"
-        class="mt-8 p-4 text-center font-bold text-base bg-accent-yellow/20 text-accent-yellow border border-accent-yellow hidden rounded-lg">
+    <!-- SEPARADOR -->
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
     </div>
+
+    <!-- 6. EVENTOS -->
+    <section id="events-module" class="dashboard-section pt-0">
+        <div class="content-container">
+
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-yellow mb-12 border-l-4 border-accent-lime pl-4"
+                data-i18n="events_title">Participação em Eventos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Evento 1 -->
+                <a href="https://blockchainrio.com.br" target="_blank" class="data-card p-6 flex flex-col items-center text-center hover:border-accent-lime/50 transition duration-300 group">
+                    <div class="w-16 h-16 bg-accent-lime/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent-lime/20 transition"><i
+                            data-lucide="calendar-check" class="w-8 h-8 text-accent-lime"></i></div>
+                    <h3 class="text-lg font-bold text-text-light mb-2">Blockchain.RIO 2024</h3>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_1_desc">Terceira edição do maior evento de blockchain e finanças digitais da América Latina. Reuniu milhares de participantes, empresas e palestrantes para discutir Web3, tokenização, DeFi, NFTs, regulamentação e inovação em ativos digitais.</p>
+                    <span class="text-xs text-accent-yellow font-bold">Rio de Janeiro, BR | Jul 2024</span>
+                </a>
+                <!-- Evento 2 -->
+                <a href="https://blockchainrio.com.br" target="_blank" class="data-card p-6 flex flex-col items-center text-center hover:border-accent-lime/50 transition duration-300 group">
+                    <div class="w-16 h-16 bg-accent-lime/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent-lime/20 transition"><i
+                            data-lucide="users" class="w-8 h-8 text-accent-lime"></i></div>
+                    <h3 class="text-lg font-bold text-text-light mb-2">Blockchain.RIO 2025</h3>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_2_desc">Edição ampliada do maior encontro Web3 da América Latina, reunindo empresas, investidores, desenvolvedores e reguladores. Aborda tokenização, IA aplicada a blockchain, finanças digitais, segurança, infraestrutura Web3 e tendências globais.</p>
+                    <span class="text-xs text-accent-yellow font-bold">Rio de Janeiro, BR | Aug 2025</span>
+                </a>
+                <!-- Evento 3 -->
+                <a href="https://ethlatam.org" target="_blank" class="data-card p-6 flex flex-col items-center text-center hover:border-accent-lime/50 transition duration-300 group">
+                    <div class="w-16 h-16 bg-accent-lime/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent-lime/20 transition"><i
+                            data-lucide="code" class="w-8 h-8 text-accent-lime"></i></div>
+                    <h3 class="text-lg font-bold text-text-light mb-2">ETH Latam 2025</h3>
+                    <p class="text-text-muted text-sm mb-4" data-i18n="event_3_desc">Principal conferência de Ethereum da América Latina. Inclui hackathon, workshops, palestras e atividades focadas em desenvolvedores e builders do ecossistema EVM. Reúne profissionais, empresas e comunidade global do Ethereum.</p>
+                    <span class="text-xs text-accent-yellow font-bold">São Paulo, BR | Nov 2025</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="content-container mx-auto px-4">
+        <div class="divider"></div>
     </div>
+
+    <!-- 7. CONTATO -->
+    <section id="contact-module" class="dashboard-section min-h-screen flex flex-col justify-center items-center pt-0">
+        <div class="content-container w-full max-w-2xl p-8 md:p-10 data-card text-center">
+            <h2
+                class="text-3xl md:text-4xl font-bold text-accent-yellow mb-8 flex items-center justify-center space-x-3">
+                <i data-lucide="mail" class="w-8 h-8 text-accent-lime"></i>
+                <span data-i18n="contact_title">Entre em Contato</span>
+            </h2>
+            <p class="text-text-muted mb-8" data-i18n="contact_subtitle">Preencha o formulário abaixo para iniciar uma
+                conversa.</p>
+            <form action="https://formspree.io/f/xjknrpak" method="POST" class="space-y-4 text-left">
+                <div>
+                    <label for="c_name" class="block text-sm font-medium text-text-muted mb-1"
+                        data-i18n="form_name">Nome</label>
+                    <input type="text" id="c_name" name="name" required
+                        class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
+                </div>
+                <div>
+                    <label for="c_email" class="block text-sm font-medium text-text-muted mb-1"
+                        data-i18n="form_email">Email</label>
+                    <input type="email" id="c_email" name="email" required
+                        class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg">
+                </div>
+                <div>
+                    <label for="c_message" class="block text-sm font-medium text-text-muted mb-1"
+                        data-i18n="form_message">Mensagem</label>
+                    <textarea id="c_message" name="message" rows="5" required
+                        class="w-full px-4 py-3 bg-bg-deep-black border border-accent-lime/50 focus:ring-accent-lime focus:border-accent-lime text-text-light placeholder-text-muted rounded-lg"></textarea>
+                </div>
+                <button type="submit" id="submit-button"
+                    class="px-6 py-3 bg-accent-lime text-bg-deep-black font-bold rounded-lg hover:bg-accent-lime/80 transition duration-300 shadow-xl shadow-accent-lime/30 w-full flex items-center justify-center space-x-2 text-lg mt-6">
+                    <i data-lucide="send" class="w-6 h-6"></i>
+                    <span data-i18n="form_submit">ENVIAR MENSAGEM</span>
+                </button>
+            </form>
+            <div id="form-message"
+                class="mt-8 p-4 text-center font-bold text-base bg-accent-yellow/20 text-accent-yellow border border-accent-yellow hidden rounded-lg">
+            </div>
+        </div>
     </section>
 
     <!-- Script JavaScript -->
@@ -671,6 +720,20 @@
                 projects_title: "Projetos em Destaque",
                 proj_cerberus_desc: "Plataforma SaaS educacional para automação de operações em DEX. Web2 + Web3, autenticação segura e monitoramento de mercado.",
                 proj_mysplit_desc: "App de divisão de despesas compartilhadas. Lógica de tempo real com Firebase, autenticação e estrutura completa.",
+                proj_cadrimil_desc: "App para cálculo de diárias de viagens para militares. Simulação de valores baseada em posto, localidade e período.",
+                proj_geana_desc: "Sistema de Análise de Sinais Eletrônicos. Interfaces para filtragem, análise e relatório de dados de radar.",
+                proj_rdsim_desc: "Simulador de Painel de Controle de Rádio e Data Link. Componentes interativos para treinamento operacional.",
+                proj_view_all: "VER TODOS OS PROJETOS",
+                events_title: "Participação em Eventos",
+                event_1_desc: "Terceira edição do maior evento de blockchain e finanças digitais da América Latina. Reuniu milhares de participantes, empresas e palestrantes para discutir Web3, tokenização, DeFi, NFTs, regulamentação e inovação em ativos digitais.",
+                event_2_desc: "Edição ampliada do maior encontro Web3 da América Latina, reunindo empresas, investidores, desenvolvedores e reguladores. Aborda tokenização, IA aplicada a blockchain, finanças digitais, segurança, infraestrutura Web3 e tendências globais.",
+                event_3_desc: "Principal conferência de Ethereum da América Latina. Inclui hackathon, workshops, palestras e atividades focadas em desenvolvedores e builders do ecossistema EVM. Reúne profissionais, empresas e comunidade global do Ethereum.",
+                contact_title: "Entre em Contato",
+                contact_subtitle: "Preencha o formulário abaixo para iniciar uma conversa.",
+                form_name: "Nome",
+                form_email: "Email",
+                form_message: "Mensagem",
+                form_submit: "ENVIAR MENSAGEM",
                 form_success: "[SUCCESS] Mensagem enviada com sucesso.",
                 form_processing: "PROCESSANDO..."
             },
@@ -715,6 +778,20 @@
                 projects_title: "Featured Projects",
                 proj_cerberus_desc: "Educational SaaS platform for DEX operation automation. Web2 + Web3, secure authentication, and market monitoring.",
                 proj_mysplit_desc: "Shared expense splitting app. Real-time logic using Firebase, authentication, and complete structure.",
+                proj_cadrimil_desc: "App for calculating travel allowances for military personnel. Simulation based on rank, location, and period.",
+                proj_geana_desc: "Electronic Signal Analysis System. Interfaces for filtering, analyzing, and reporting radar data.",
+                proj_rdsim_desc: "Radio Control Panel & Data Link Simulator. Interactive components for operational training.",
+                proj_view_all: "VIEW ALL PROJECTS",
+                events_title: "Events Participation",
+                event_1_desc: "Third edition of the largest blockchain and digital finance event in Latin America. Gathered thousands of participants, companies, and speakers to discuss Web3, tokenization, DeFi, NFTs, regulation, and innovation in digital assets.",
+                event_2_desc: "Expanded edition of the largest Web3 meeting in Latin America, bringing together companies, investors, developers, and regulators. Covers tokenization, AI applied to blockchain, digital finance, security, Web3 infrastructure, and global trends.",
+                event_3_desc: "Main Ethereum conference in Latin America. Includes hackathon, workshops, talks, and activities focused on developers and builders of the EVM ecosystem. Gathers professionals, companies, and the global Ethereum community.",
+                contact_title: "Get in Touch",
+                contact_subtitle: "Fill out the form below to start a conversation.",
+                form_name: "Name",
+                form_email: "Email",
+                form_message: "Message",
+                form_submit: "SEND MESSAGE",
                 form_success: "[SUCCESS] Message sent successfully.",
                 form_processing: "PROCESSING..."
             }
