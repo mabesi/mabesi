@@ -1,0 +1,87 @@
+/* Estilos Globais */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    /* Deep Black */
+    color: #F3F4F6;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Estilo para a Seção */
+.dashboard-section {
+    min-height: 100vh;
+    padding: 8rem 1rem 4rem 1rem;
+    position: relative;
+    scroll-margin-top: 100px;
+}
+
+/* Contêiner de Conteúdo Central */
+.content-container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Card Principal/Componente */
+.data-card {
+    background-color: #0F0F0F;
+    /* Card Dark */
+    border: 1px solid rgba(132, 204, 22, 0.2);
+    /* Lime border sutil */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.data-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(132, 204, 22, 0.5);
+    /* Lime hover glow */
+}
+
+/* Destaque para Icones e Texto Principal */
+.accent-icon {
+    color: #FBBF24;
+    /* Amber */
+}
+
+/* Linha de separação */
+.divider {
+    width: 100%;
+    height: 1px;
+    /* Gradiente usando as novas cores */
+    background: linear-gradient(to right, #0F0F0F, #84CC16, #0F0F0F);
+    opacity: 0.3;
+    margin: 4rem 0;
+}
+
+/* Estilo do Menu Flutuante */
+.floating-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    border-radius: 8px 0 0 8px;
+    background-color: transparent;
+    color: #A3A3A3;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.floating-menu-item:hover,
+.floating-menu-item.active {
+    background-color: #0F0F0F;
+    color: #84CC16;
+    transform: translateX(-5px);
+    border-left: 3px solid #FBBF24;
+}
+
+.floating-menu-item span {
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 600;
+    margin-right: 8px;
+}
