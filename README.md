@@ -11,13 +11,15 @@
 
 ## 👨‍💻 About Me
 
-I am a **Blockchain & Web3 Full-Stack Developer** in career transition, focused on smart contracts, decentralized applications, and secure system design. My experience in Web3 is built through intensive hands-on study, personal projects, and end-to-end development of practical prototypes.
+I am a **Blockchain & Web3 Full-Stack Developer** in career transition, focused on smart contracts, decentralized applications, and end-to-end Web3 solutions. My experience in blockchain is built through **hands-on study and the development of personal and didactic projects**, where I design, implement, and test complete systems across the Web2–Web3 stack.
 
-Alongside my Web3 path, I have solid experience developing complete software systems in **JavaScript/TypeScript**, **React**, **React Native**, and data-driven interfaces for corporate environments (Brazilian Air Force). This combination allows me to approach blockchain development with strong fundamentals in architecture, usability, and problem-solving.
+I combine this Web3 focus with a solid background in **full-stack software development**, working with **JavaScript/TypeScript, React, and React Native**, as well as data-driven interfaces developed for corporate environments. This background allows me to approach blockchain projects with strong foundations in **system architecture, code organization, usability, and problem-solving**, applying best practices from traditional software engineering to decentralized systems.
 
-- 🔭 I’m currently working on **personal and didactic blockchain projects**.
-- 🌱 I’m currently learning **Advanced Solidity patterns and Zero Knowledge Proofs**.
-- 💬 Ask me about **Smart Contracts, dApps, and React**.
+- 🔭 Currently developing **personal and didactic blockchain projects**, including smart contracts, dApps, and developer tooling.
+
+- 🌱 Continuously deepening my knowledge of advanced **Solidity patterns, testing strategies, gas optimization, and Zero-Knowledge concepts**.
+
+- 💬 Open to discussions about **smart contracts, dApp architecture, Web3 tooling, and full-stack React-based solutions**.
 
 ---
 
@@ -61,27 +63,3 @@ Alongside my Web3 path, I have solid experience developing complete software sys
 ---
 
 ## 🏆 Featured Projects
-
-### [Cerberus Dex Bot](https://github.com/mabesi/cerberus)
-
-**Educational SaaS Bot for DEX Automation**
-- **Stack**: Solidity, Hardhat, React, Next.js, WebSockets.
-- **Description**: A multi-tenant SaaS designed to demonstrate practical Web3 automation. Features secure authentication, crypto-based billing, and continuous market monitoring for automated swap execution.
-
-### [MySplit](https://github.com/mabesi/mysplit)
-
-**Shared Expense Splitter App**
-- **Stack**: React Native, Expo, Firebase.
-- **Description**: A complete mobile app for splitting shared expenses with real-time logic using Firebase Realtime Database, authentication, and a robust structure.
-
-### [Cadrimil](https://github.com/mabesi/cadrimil)
-
-**Military Travel Allowance Calculator**
-- **Stack**: React Native, Expo.
-- **Description**: Utility app for military personnel to simulate travel allowances based on rank, location, and mission period.
-
----
-
-<div align="center">
-  <sub>Built with ❤️ by Plinio Mabesi</sub>
-</div>
