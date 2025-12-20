@@ -230,24 +230,28 @@ updateFloatingMenu();
 
 // Category gradient mapping (subtle gradients with increased contrast)
 const categoryGradients = {
-    'finance': 'linear-gradient(135deg, #9a3412 0%, #f97316 100%)',      // Laranja: escuro → claro
-    'utilities': 'linear-gradient(135deg, #1e3a8a 0%, #60a5fa 100%)',    // Azul: escuro → claro
-    'productivity': 'linear-gradient(135deg, #065f46 0%, #34d399 100%)', // Verde: escuro → claro
-    'education': 'linear-gradient(135deg, #6b21a8 0%, #c084fc 100%)',    // Roxo: escuro → claro
-    'tools': 'linear-gradient(135deg, #3f6212 0%, #84cc16 100%)',        // Verde limão: escuro → claro
-    'health': 'linear-gradient(135deg, #991b1b 0%, #f87171 100%)',       // Vermelho: escuro → claro
-    'games': 'linear-gradient(135deg, #b45309 0%, #fbbf24 100%)'         // Âmbar: escuro → claro
+    'finance': 'linear-gradient(135deg, #b45309 0%, #fbbf24 100%)',      // 💰 Amarelo/Laranja
+    'utilities': 'linear-gradient(135deg, #1e40af 0%, #60a5fa 100%)',    // 🎖️ Azul
+    'productivity': 'linear-gradient(135deg, #059669 0%, #34d399 100%)', // 🚀 Verde claro
+    'education': 'linear-gradient(135deg, #9333ea 0%, #c084fc 100%)',    // 📚 Roxo claro
+    'tools': 'linear-gradient(135deg, #16a34a 0%, #22c55e 100%)',        // 🔧 Verde escuro
+    'health': 'linear-gradient(135deg, #db2777 0%, #f472b6 100%)',       // 💊 Rosa escuro
+    'games': 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)',        // 🎮 Roxo
+    'blockchain': 'linear-gradient(135deg, #501b1b 0%, #9b6767 100%)',   // 🔗 Marrom/Terra
+    'library': 'linear-gradient(135deg, #be185d 0%, #ec4899 100%)'      // 📦 Rosa
 };
 
 // Category solid colors for text highlights
 const categoryColors = {
-    'finance': '#ea580c',
-    'utilities': '#3b82f6',
-    'productivity': '#10b981',
-    'education': '#a855f7',
-    'tools': '#65a30d',
-    'health': '#dc2626',
-    'games': '#f59e0b'
+    'finance': '#fbbf24',      // 💰 Amarelo/Laranja
+    'utilities': '#60a5fa',    // 🎖️ Azul
+    'productivity': '#34d399', // 🚀 Verde claro
+    'education': '#c084fc',    // 📚 Roxo claro
+    'tools': '#22c55e',        // 🔧 Verde escuro
+    'health': '#f472b6',       // 💊 Rosa escuro
+    'games': '#a78bfa',        // 🎮 Roxo
+    'blockchain': '#9b6767',   // 🔗 Marrom/Terra
+    'library': '#ec4899'       // 📦 Rosa
 };
 
 // Build complete URL from link value and pattern
