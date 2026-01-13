@@ -85,3 +85,14 @@ body {
     font-weight: 600;
     margin-right: 8px;
 }
+
+/* Language selector flags */
+.lang-flag {
+    display: inline-block;
+    transition: filter 0.3s ease;
+}
+
+.lang-flag.grayscale {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}

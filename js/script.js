@@ -136,8 +136,44 @@ function changeLanguage(lang) {
     // Persist preference
     localStorage.setItem('preferredLang', lang);
 
+    // Update language button styles
+    updateLanguageButtons(lang);
+
     // Re-render project cards with new language
     renderFeaturedProjects();
+}
+
+// Update language buttons visual state
+function updateLanguageButtons(lang) {
+    const ptBtn = document.getElementById('lang-pt');
+    const enBtn = document.getElementById('lang-en');
+
+    if (ptBtn && enBtn) {
+        const ptFlag = ptBtn.querySelector('.lang-flag');
+        const enFlag = enBtn.querySelector('.lang-flag');
+
+        if (lang === 'pt') {
+            // PT active
+            ptBtn.classList.remove('text-text-muted');
+            ptBtn.classList.add('text-white');
+            ptFlag?.classList.remove('grayscale');
+
+            // EN inactive
+            enBtn.classList.remove('text-white');
+            enBtn.classList.add('text-text-muted');
+            enFlag?.classList.add('grayscale');
+        } else {
+            // EN active
+            enBtn.classList.remove('text-text-muted');
+            enBtn.classList.add('text-white');
+            enFlag?.classList.remove('grayscale');
+
+            // PT inactive
+            ptBtn.classList.remove('text-white');
+            ptBtn.classList.add('text-text-muted');
+            ptFlag?.classList.add('grayscale');
+        }
+    }
 }
 
 // Load saved language or default to PT
